@@ -1,5 +1,11 @@
 body{
     font-family: "Yu-gothic";
+    background-color: #F9F3AF;
+}
+body h3{
+    font-size: 18px;
+    font-weight: bold;
+    color: #f1c668;
 }
 .shakehands{
     position: relative;
