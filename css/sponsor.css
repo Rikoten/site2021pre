@@ -1,0 +1,21 @@
+.shakehands::before{
+    content: url("../img/sponsor/handshake.svg");
+    position: absolute;
+    top: 0px;
+    left:0px;
+}
+
+.Hexagon::before{
+    content: url("../img/sponsor/Hexagon.svg");
+    position: absolute;
+    top: 0px;
+    left:0px;
+}
+
+.Triangle::before{
+    content: url("../img/sponsor/Triangle.svg");
+    position: absolute;
+    top: 0px;
+    left:0px;
+}
+
