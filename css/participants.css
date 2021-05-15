@@ -1,10 +1,24 @@
 body{
     color:#ECA83E;
     background-color: #F9F3AF;
+    max-width: 800px;
+    margin: auto;
+}
+h2{
+    position: relative;
+    padding-left: 50px;
+}
+h2::before{
+    position: absolute;
+    content: url(../img/participants/participants.svg);
+    margin-left: -50px;
+    width: 50px;
 }
 h4{
     position: relative;
     padding-left: 30px;
+    font-size: 1.5rem;
+    font-weight: 500;
 }
 h4::before{
     position: absolute;
