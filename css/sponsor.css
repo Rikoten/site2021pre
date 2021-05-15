@@ -1,3 +1,6 @@
+.shakehands{
+    position: relative;
+}
 .shakehands::before{
     content: url("../img/sponsor/handshake.svg");
     position: absolute;
@@ -5,6 +8,9 @@
     left:0px;
 }
 
+.Hexagon{
+    position: relative;
+}
 .Hexagon::before{
     content: url("../img/notice/hexagon.svg");
     position: absolute;
@@ -12,6 +18,9 @@
     left:0px;
 }
 
+.Triangle{
+    position: relative;
+}
 .Triangle::before{
     content: url("../img/notice/triangle.svg");
     position: absolute;
