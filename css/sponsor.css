@@ -2,10 +2,29 @@ body{
     font-family: "Yu-gothic";
     background-color: #F9F3AF;
 }
-body h3{
+body h2{
+    color: #ECA83E;
+}
+body p{
     font-size: 18px;
     font-weight: bold;
-    color: #f1c668;
+    color: #ECA83E;
+}
+body div{
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ECA83E;
+}
+body div::before{
+    content: ""; /* 何も入れない */
+    display: inline-block; /* 絶対必要 */
+    background-image: url("../img/sponsor/pdf.svg"); /* 背景として画像を挿入 */
+    width: 30px; /* widthとheightをどちらも必ず指定 */
+    height: 30px;
+    position: absolute;
+    top: 0px;
+    left: -30px;
 }
 .shakehands{
     position: relative;
