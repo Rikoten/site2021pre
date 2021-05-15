@@ -1,12 +1,21 @@
-.shakehands{
-
+.shakehands::before{
+    content: url("../img/sponsor/handshake.svg");
+    position: absolute;
+    top: 0px;
+    left:-40px;
 }
 
-.Hexagon{
-
+.Hexagon::before{
+    content: url("../img/sponsor/Hexagon.svg");
+    position: absolute;
+    top: 0px;
+    left:-40px;
 }
 
-.Triangle{
-
+.Triangle::before{
+    content: url("../img/sponsor/Triangle.svg");
+    position: absolute;
+    top: 0px;
+    left:-40px;
 }
 
