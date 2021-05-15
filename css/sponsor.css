@@ -34,7 +34,7 @@ body div::before{
     width: 35px;
     height: 35px;
     top: 0px;
-    left:-30px;
+    left:400px;
 }
 .shakehands{
     position: relative;
