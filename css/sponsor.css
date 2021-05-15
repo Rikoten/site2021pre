@@ -1,9 +1,12 @@
 body{
     font-family: "Yu-gothic";
     background-color: #F9F3AF;
+    max-width: 900px;
+    margin :auto;
 }
 body h2{
     color: #ECA83E;
+    margin-left: 30px;
 }
 body p{
     font-size: 18px;
@@ -17,14 +20,10 @@ body div{
     color: #ECA83E;
 }
 body div::before{
-    content: ""; 
-    display: inline-block;
-    background-image: url("../img/sponsor/pdf.svg");
-    width: 30px; 
-    height: 30px;
+    content: url("../img/sponsor/pdf.svg");
     position: absolute;
     top: 0px;
-    left: -30px;
+    left:-30px;
 }
 .shakehands{
     position: relative;
@@ -33,7 +32,7 @@ body div::before{
     content: url("../img/sponsor/handshake.svg");
     position: absolute;
     top: 0px;
-    left:0px;
+    left:-30px;
 }
 
 .Hexagon{
@@ -43,7 +42,7 @@ body div::before{
     content: url("../img/notice/hexagon.svg");
     position: absolute;
     top: 0px;
-    left:0px;
+    left:-30px;
 }
 
 .Triangle{
@@ -53,6 +52,6 @@ body div::before{
     content: url("../img/notice/triangle.svg");
     position: absolute;
     top: 0px;
-    left:0px;
+    left:-30px;
 }
 
