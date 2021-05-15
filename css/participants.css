@@ -1,15 +1,21 @@
 body{
     color:#ECA83E;
     background-color: #F9F3AF;
-    max-width: 800px;
+    max-width: 900px;
     margin: auto;
     font-family: "Yu Gothic", 游ゴシック, YuGothic, 游ゴシック体, "ヒラギノ角ゴ Pro W3", メイリオ, sans-serif;
     font-weight: bold;
     font-size: 18px;
 }
+
+h2, h3, h4 {
+    margin-bottom: 8px;
+}
 h2{
     position: relative;
     padding-left: 50px;
+    font-weight: 500;
+    font-size: 30px;
 }
 h2::before{
     position: absolute;
@@ -21,6 +27,8 @@ h2::before{
 h3 { 
     position: relative;
     padding-left: 40px;
+    font-weight: 500;
+    font-size: 1.75rem;
 }
 h3::before{
     position: absolute;
@@ -44,6 +52,6 @@ h4::before{
 }
 
 p {
-    margin-top: 0;
-
+    margin-top: 0px;
+    text-align: justify;
 }
