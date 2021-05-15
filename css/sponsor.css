@@ -22,6 +22,7 @@ body p{
     color: #ECA83E;
 }
 body div{
+    position:relative;
     text-align: center;
     font-size: 18px;
     font-weight: bold;
@@ -56,7 +57,7 @@ body div::before{
     height: 35px;
     position: absolute;
     top: 0px;
-    left:-30px;
+    left:-40px;
 }
 
 .Triangle{
