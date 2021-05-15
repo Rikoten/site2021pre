@@ -1,22 +1,24 @@
 body{
-    font-family: "Yu-gothic";
     background-color: #F9F3AF;
     max-width: 900px;
+    font-family: "Yu Gothic", 游ゴシック, YuGothic, 游ゴシック体, "ヒラギノ角ゴ Pro W3", メイリオ, sans-serif;
+    font-weight: bold;
     margin :auto;
 }
 body h2{
     color: #ECA83E;
     font-size: 1.5rem;
+    font-weight: 500;
     margin-left: 30px;
 }
 body h3{
     color: #ECA83E;
     font-size: 1.5rem;
+    font-weight: 500;
     margin-left: 50px;
 }
 body p{
     font-size: 18px;
-    font-weight: bold;
     color: #ECA83E;
 }
 body div{
