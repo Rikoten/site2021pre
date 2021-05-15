@@ -30,6 +30,8 @@ body div{
 body div::before{
     content: url("../img/sponsor/pdf.svg");
     position: absolute;
+    width: 35px;
+    height: 35px;
     top: 0px;
     left:-30px;
 }
@@ -38,6 +40,8 @@ body div::before{
 }
 .shakehands::before{
     content: url("../img/sponsor/handshake.svg");
+    width: 35px;
+    height: 35px;
     position: absolute;
     top: 0px;
     left: -60px;
@@ -48,6 +52,8 @@ body div::before{
 }
 .Hexagon::before{
     content: url("../img/participants/hexagon.svg");
+    width: 35px;
+    height: 35px;
     position: absolute;
     top: 0px;
     left:-30px;
