@@ -6,7 +6,13 @@ body{
 }
 body h2{
     color: #ECA83E;
+    font-size: 1.5rem;
     margin-left: 30px;
+}
+body h3{
+    color: #ECA83E;
+    font-size: 1.5rem;
+    margin-left: 50px;
 }
 body p{
     font-size: 18px;
