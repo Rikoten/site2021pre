@@ -1,3 +1,30 @@
+body{
+    font-family: "Yu-gothic";
+    background-color: #F9F3AF;
+    max-width: 900px;
+    margin :auto;
+}
+body h2{
+    color: #ECA83E;
+    margin-left: 30px;
+}
+body p{
+    font-size: 18px;
+    font-weight: bold;
+    color: #ECA83E;
+}
+body div{
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ECA83E;
+}
+body div::before{
+    content: url("../img/sponsor/pdf.svg");
+    position: absolute;
+    top: 0px;
+    left:-30px;
+}
 .shakehands{
     position: relative;
 }
@@ -5,7 +32,7 @@
     content: url("../img/sponsor/handshake.svg");
     position: absolute;
     top: 0px;
-    left:0px;
+    left:-30px;
 }
 
 .Hexagon{
@@ -15,7 +42,7 @@
     content: url("../img/notice/hexagon.svg");
     position: absolute;
     top: 0px;
-    left:0px;
+    left:-30px;
 }
 
 .Triangle{
@@ -25,6 +52,6 @@
     content: url("../img/notice/triangle.svg");
     position: absolute;
     top: 0px;
-    left:0px;
+    left:-30px;
 }
 
