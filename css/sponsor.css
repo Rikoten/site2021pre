@@ -40,14 +40,14 @@ body div::before{
     content: url("../img/sponsor/handshake.svg");
     position: absolute;
     top: 0px;
-    left:-30px;
+    left: -60px;
 }
 
 .Hexagon{
     position: relative;
 }
 .Hexagon::before{
-    content: url("../img/notice/hexagon.svg");
+    content: url("../img/participants/hexagon.svg");
     position: absolute;
     top: 0px;
     left:-30px;
