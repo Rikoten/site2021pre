@@ -27,7 +27,7 @@ h3::before{
     content: url(../img/participants/hexagon.svg);
     margin-left: -40px;
     width: 35px;
-    height: 30px;
+    height: 35px;
 }
 h4{
     position: relative;
