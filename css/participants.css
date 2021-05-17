@@ -1,15 +1,22 @@
 body{
     color:#ECA83E;
     background-color: #F9F3AF;
-    max-width: 800px;
+    max-width: 900px;
     margin: auto;
     font-family: "Yu Gothic", 游ゴシック, YuGothic, 游ゴシック体, "ヒラギノ角ゴ Pro W3", メイリオ, sans-serif;
     font-weight: bold;
     font-size: 18px;
 }
+
+h2, h3, h4 {
+    margin-bottom: 8px;
+}
+
 h2{
     position: relative;
     padding-left: 50px;
+    font-weight: 500;
+    font-size: 30px;
 }
 h2::before{
     position: absolute;
@@ -21,13 +28,15 @@ h2::before{
 h3 { 
     position: relative;
     padding-left: 40px;
+    font-weight: 500;
+    font-size: 1.75rem;
 }
 h3::before{
     position: absolute;
     content: url(../img/participants/hexagon.svg);
     margin-left: -40px;
     width: 35px;
-    height: 30px;
+    top: calc(50% - 17.5px);
 }
 h4{
     position: relative;
@@ -41,9 +50,85 @@ h4::before{
     width: 30px;
     height: 30px;
     margin-left: -30px;
+    top: calc(50% - 15px);
 }
 
-p {
-    margin-top: 0;
+.pdf{
+    position: relative;
+    display: block;
+    width: max-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+.pdf::before{
+    position: absolute;
+    content: url(../img/participants/pdf.svg);
+    width: 30px;
+    margin-left: -40px;
+    top: calc(50% - 17px);
+}
 
+.excel{
+    position: relative;
+    display: block;
+    width: max-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+.excel::before{
+    position: absolute;
+    content: url(../img/participants/excel.svg);
+    width: 30px;
+    margin-left: -40px;
+    top: calc(50% - 17px);
+}
+
+.word{
+    position: relative;
+    display: block;
+    width: max-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+.word::before{
+    position: absolute;
+    content: url(../img/participants/word.svg);
+    width: 30px;
+    margin-left: -40px;
+    top: calc(50% - 17px);
+}
+.movie{
+    position: relative;
+    display: block;
+    width: max-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+.movie::before{
+    position: absolute;
+    content: url(../img/participants/movie.svg);
+    width: 30px;
+    margin-left: -40px;
+    top: calc(50% - 15px);
+}
+
+.form{
+    position: relative;
+    display: block;
+    width: max-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+.form::before{
+    position: absolute;
+    content: url(../img/participants/form.svg);
+    width: 30px;
+    margin-left: -40px;
+    top: calc(50% - 17px);
+}
+
+
+p {
+    margin-top: 0px;
+    text-align: justify;
 }
