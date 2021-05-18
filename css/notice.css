@@ -33,7 +33,7 @@ h1::before{
 }
 
 .title::before{
-    content: url(/img/notice/hexagon.svg);
+    content: url(/img/participants/hexagon.svg);
     position: absolute;
     height: 30px;
     width: 30px;
@@ -55,7 +55,7 @@ h2::before{
     top: 2px;
 }
 
-.date{
+#date{
     font-weight: bold;
     text-align: right;
 }
