@@ -1,0 +1,43 @@
+:root {
+  --color-font: #404040;
+  --color-blue: #67B6FF;
+  --color-purple: #8F73FF;
+}
+
+iframe {
+  border: none;
+  box-shadow: 0px 3px 16px -6px rgba(0,0,0,0.25);
+  border-radius: 10px;
+  width: 1050px;
+  transition: all 0.5s cubic-bezier(0, 0, 0.07, 1) 0s;
+}
+
+div.wrapper {
+  width: 1050px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+div.view-mode {
+  display: flex;
+  justify-content: center;
+  width: 1050px;
+  margin: 50px 0;
+}
+
+div.view-mode button {
+  width: 200px;
+  height: 45px;
+  border: 1px solid var(--color-purple);
+  background-color: #FFF;
+  color: var(--color-purple);
+  border-radius: 100px;
+  margin: 0 20px;
+  cursor: pointer;
+}
+
+div.view-mode button.active {
+  background-color: var(--color-purple);
+  color: #FFF;
+}
+

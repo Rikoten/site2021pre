@@ -1,0 +1,159 @@
+:root {
+  --color-font: #404040;
+  --color-blue: #67B6FF;
+  --color-purple: #8F73FF;
+}
+
+body {
+  font-family: "Yu Gothic", 游ゴシック, YuGothic, 游ゴシック体, "ヒラギノ角ゴ Pro W3", メイリオ, sans-serif;
+  font-size: 16px;
+  color: var(--color-font);
+  padding: 100px 0;
+  margin: 0;
+}
+
+main {
+  max-width: 800px;
+  width: calc(100% - 30px);
+  margin-left: 150px;
+}
+
+img {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+p {
+  line-height: 1.8em;
+  margin: 0 0 30px 0;
+}
+
+h1 {
+  font-size: 50px;
+  margin: 0;
+}
+
+h2 {
+  font-size: 30px;
+  border-bottom: 1px solid #E0E0E0;
+  padding-left: 30px;
+  margin-left: -30px;
+  padding-bottom: 10px;
+}
+
+h3 {
+  font-size: 22px;
+}
+
+header {
+  margin-bottom: 50px;
+  position: relative;
+}
+
+header div.header-top {
+  display: flex;
+  margin-left: 50px;
+  align-items: flex-start;
+}
+
+header img.thumbnail {
+  width: 100px;
+  height: 100px;
+  margin-right: 20px;
+  margin-top: -5px;
+}
+
+header span {
+  padding: 5px 15px;
+  border-radius: 100px;
+  color: #FFF;
+  font-weight: bold;
+}
+
+header span.offline {
+  background-color: var(--color-blue);
+  margin-right: 10px;
+}
+
+header span.article {
+  background-color: var(--color-purple);
+}
+
+header p {
+  box-sizing: content-box;
+  width: 800px;
+  padding: 10px 0 10px 40px;
+  border-left: 1px solid var(--color-font);
+  margin-left: 110px;
+  font-weight: bold;
+}
+
+header div.back {
+  width: 750px;
+  height: 450px;
+  position: absolute;
+  top: -50px;
+  left: 0;
+  z-index: -1;
+  background-color: #F3F3F3;
+}
+
+@media screen and (max-width: 1049px) {
+  body {
+    font-size: 14px;
+  }
+
+  main {
+    margin: 0 auto;
+  }
+
+  h1 {
+    font-size: 28px;
+    line-height: 1.3em;
+    margin-top: 10px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+
+  p {
+    margin-bottom: 20px;
+  }
+
+  header div.header-top {
+    width: calc(100% - 30px);
+    margin: 0 auto;
+  }
+
+  header span {
+    font-size: 13px;
+  }
+
+  header img.thumbnail {
+    width: 70px;
+    height: 70px;
+    margin: 0 10px 0 0;
+  }
+
+  header p {
+    width: calc(100% - 30px);
+    margin: 0 auto;
+    padding-left: 15px;
+    box-sizing: border-box;
+  }
+
+  img {
+    margin: 0 -15px 20px;
+    width: calc(100% + 30px);
+  }
+
+  header div.back {
+    width: 80%;
+    height: 400px;
+  }
+}
