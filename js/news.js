@@ -1,5 +1,5 @@
 (async () => {
-    const json = await fetch('/data/notice.json').then(res => res.json());
+    const json = await fetch('/data/news.json').then(res => res.json());
     const title = document.querySelector(".title");
     const date = document.querySelector(".date");
     const label = document.querySelector(".name");
