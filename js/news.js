@@ -21,8 +21,8 @@
         link_title.textContent = data.link_t;
         let stocklist = [];
         for(let i = 0; i < data.link.length; i++){
-            console.log(data.link[i].name);
-            console.log(data.link[i].url);
+            /*console.log(data.link[i].name);
+            console.log(data.link[i].url);*/
             stocklist.push(`
                 <li>
                     <a href="${data.link[i].url}">${data.link[i].name}</a>
