@@ -15,6 +15,19 @@
             all += data.contents[i]+"\n";
         }
         sentence.innerHTML = all.replace(/\n/g, '<br>');
+        link_title.textContent = data.link_t;
+        let stocklist = [];
+        for(let i = 0; i < data.link.length; i++){
+            console.log(data.link[i].name);
+            console.log(data.link[i].url);
+            /*stocklist += '<li><a href="data.link[i].url">'+ data.link[i].name + '</a></li>';*/
+            stocklist.push(`
+                <li>
+                    <a href="${data.link[i].url}">${data.link[i].name}</a>
+                </li>
+            `);
+        }
+        document.getElementById('link_list').innerHTML = stocklist.join("");
     }
 
 })();
