@@ -346,7 +346,7 @@ a{
     .title-wrapper{
         display: flex;
         justify-content: space-around;
-        margin: 0 auto;
+        margin: 20px auto 0px auto;
     }
 
     /*.schedule-table-event{
@@ -361,6 +361,7 @@ a{
         width: calc(100% - 15px);
         margin: 20px auto 0px auto;
     }
+
 
     ul{
         padding: 0px;
