@@ -290,6 +290,10 @@ p {
         margin: 0 auto;
     }
 
+    .schedule-table-event{
+        width: 100%;
+    }
+
     .sts{
         display: none;
     }
