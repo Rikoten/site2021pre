@@ -1,11 +1,15 @@
 body{
-    color:#ECA83E;
-    background-color: #F9F3AF;
-    max-width: 900px;
-    margin: auto;
+    color:black;
+    background-color: white;
+    max-width: 1000px;
+    margin: 0 auto;
     font-family: "Yu Gothic", 游ゴシック, YuGothic, 游ゴシック体, "ヒラギノ角ゴ Pro W3", メイリオ, sans-serif;
     font-weight: bold;
     font-size: 18px;
+}
+
+.participants{
+    margin: 45px 0px 0px 0px;
 }
 
 h2, h3, h4 {
@@ -25,11 +29,75 @@ h2::before{
     width: 50px;
 }
 
+li{
+    display: flex;
+    width: 460px;
+    height: 45px;
+    line-height: 45px;
+}
+
+.gray{
+    background-color: #F3F3F3;
+}
+
+.date{
+    width:150px;
+    margin-left: 30px;
+}
+
+.table{
+    display: flex;
+    justify-content: space-between;
+}
+
+ul{
+    padding-bottom: 67px;
+    margin-bottom: 0px;
+    font-weight: normal;
+}
+
+.title{
+    color: #ECA83E;
+    border: 1px solid #ECA83E;
+    border-radius: 50px;
+    width: 460px;
+    height: 40px;
+    margin-bottom: 20px;
+    line-height: 40px;
+    text-align: center;
+}
+
+.title2{
+    display: none;
+}
+
+.title3{
+    color: #ECA83E;
+    border: 1px solid #ECA83E;
+    border-radius: 50px;
+    width: 460px;
+    height: 40px;
+    margin-bottom: 20px;
+    line-height: 40px;
+    text-align: center;
+}
+
+.schedule-table-event{
+    padding-left: 0px;
+}
+
+.schedule-table-stage{
+    padding-left: 0px;
+}
+
+
 h3 { 
     position: relative;
     padding-left: 40px;
-    font-weight: 500;
-    font-size: 1.75rem;
+    font-weight: bold;
+    font-size: 24px;
+    margin-top: 40px;
+    color: #ECA83E;
 }
 h3::before{
     position: absolute;
@@ -40,18 +108,18 @@ h3::before{
 }
 h4{
     position: relative;
-    padding-left: 30px;
-    font-size: 1.5rem;
+    /*padding-left: 30px;*/
+    font-size: 18px;
     font-weight: 500;
 }
-h4::before{
+/*h4::before{
     position: absolute;
     content: url(../img/participants/triangle.svg);
     width: 30px;
     height: 30px;
     margin-left: -30px;
     top: calc(50% - 15px);
-}
+}*/
 
 .pdf{
     position: relative;
@@ -59,12 +127,13 @@ h4::before{
     width: max-content;
     margin-left: auto;
     margin-right: auto;
+    font-size: 14px;
 }
 .pdf::before{
     position: absolute;
     content: url(../img/participants/pdf.svg);
     width: 30px;
-    margin-left: -40px;
+    margin-left: -35px;
     top: calc(50% - 17px);
 }
 
@@ -74,6 +143,7 @@ h4::before{
     width: max-content;
     margin-left: auto;
     margin-right: auto;
+    font-size: 14px;
 }
 .excel::before{
     position: absolute;
@@ -89,12 +159,13 @@ h4::before{
     width: max-content;
     margin-left: auto;
     margin-right: auto;
+    font-size: 14px;
 }
 .word::before{
     position: absolute;
-    content: url(../img/participants/word.svg);
+    content: url(../img/participants/word3.svg);
     width: 30px;
-    margin-left: -40px;
+    margin-left: -35px;
     top: calc(50% - 17px);
 }
 .movie{
@@ -103,12 +174,13 @@ h4::before{
     width: max-content;
     margin-left: auto;
     margin-right: auto;
+    font-size: 14px;
 }
 .movie::before{
     position: absolute;
     content: url(../img/participants/movie.svg);
     width: 30px;
-    margin-left: -40px;
+    margin-left: -20px;
     top: calc(50% - 15px);
 }
 
@@ -118,17 +190,111 @@ h4::before{
     width: max-content;
     margin-left: auto;
     margin-right: auto;
+    font-size: 14px;
 }
 .form::before{
     position: absolute;
-    content: url(../img/participants/form.svg);
+    content: url(../img/participants/form2.svg);
     width: 30px;
-    margin-left: -40px;
+    margin-left: -35px;
     top: calc(50% - 17px);
+}
+
+.img{
+    position: relative;
+    display: block;
+    width: max-content;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 14px;
 }
 
 
 p {
     margin-top: 0px;
     text-align: justify;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.documents > div > div{
+    background-color: #F3F3F3;
+    border-radius: 10px;
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+    padding-left: 35px;
+    text-align: center;
+    font-weight: normal;
+}
+
+@media screen and (min-width: 576px) and (max-width: 1000px){
+    body{
+        width:calc(100% - 10px);
+    }
+
+    .table{
+        display:block;
+        margin: 0px auto;
+    }
+
+    .title{
+        margin: 0px auto 20px auto;
+    }
+
+    ul{
+        width: 460px;
+        margin: 0 auto;
+    }
+
+}
+
+@media screen and (max-width: 576px){
+    .table{
+        display: flex;
+        justify-content: none;
+    }
+
+    li{
+        padding: 0;
+        width: 100%;
+    }
+
+    .active{
+        display: block;
+    }
+
+    .title{
+        width: 45%;        
+    }
+
+    .title2{
+        display: block;
+        color: #ECA83E;
+        border: 1px solid #ECA83E;
+        border-radius: 50px;
+        width: 45%;
+        height: 40px;
+        margin-bottom: 20px;
+        line-height: 40px;
+        text-align: center;
+    }
+
+    .title3{
+        display: none;
+    }
+
+    .title-wrapper{
+        display: flex;
+        justify-content: space-around;
+        margin: 0 auto;
+    }
+
+    .sts{
+        display: none;
+    }
+    p{
+        width: 100%;
+    }
+
 }
