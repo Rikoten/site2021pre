@@ -3,7 +3,7 @@ const iframe = document.querySelector("iframe");
 window.addEventListener('load', () => {
   const DE = iframe.contentWindow.document.documentElement;
 
-  iframe.style.height = DE.scrollHeight + "px";
+  iframe.style.height = DE.scrollHeight + 100 + "px";
 });
 
 const PCVer = document.querySelector(".view-mode .pc");

@@ -256,8 +256,8 @@ section.quiz div.commentary-open {
   padding: 20px 100px 20px 150px;
   margin: 0 -100px 0 -150px;
   max-width: 800px;
-  width: calc(100% - 30px);
   box-sizing: content-box;
+  width: 800px;
 }
 
 section.quiz div span:last-of-type {

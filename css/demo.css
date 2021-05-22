@@ -9,6 +9,7 @@ iframe {
   box-shadow: 0px 3px 16px -6px rgba(0,0,0,0.25);
   border-radius: 10px;
   width: 1050px;
+  height: 1000px;
   transition: all 0.5s cubic-bezier(0, 0, 0.07, 1) 0s;
 }
 
@@ -35,6 +36,7 @@ div.view-mode button {
   margin: 0 20px;
   cursor: pointer;
   transition: .3s;
+  outline: none;
 }
 
 div.view-mode button.active {

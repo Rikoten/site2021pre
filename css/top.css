@@ -1,0 +1,247 @@
+:root {
+  --color-font: #404040;
+  --color-blue: #67B6FF;
+  --color-orange: #ECA83E;
+  --color-red: #FA5454;
+  --color-purple: #8F73FF;
+  --color-green: #30F3AC;
+}
+
+html {
+  font-size: calc(100vw / 32);
+}
+
+body {
+  font-family: "Yu Gothic", 游ゴシック, YuGothic, 游ゴシック体, "ヒラギノ角ゴ Pro W3", メイリオ, sans-serif;
+  margin: 0;
+  color: var(--color-font);
+}
+
+p, span {
+  font-size: .5rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: inherit;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+h1 {
+  font-size: 3rem;
+  position: absolute;
+  left: 0;
+  color: rgba(53, 53, 53, .03);
+  margin: 0;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+p.lead {
+  text-align: center;
+  margin-bottom: 2rem;
+  line-height: 2em;
+}
+
+section {
+  padding: 3rem 0;
+  position: relative;
+}
+
+section.about h2 {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+
+section.about h2 span {
+  padding: .1rem .4rem;
+  margin-right: .4rem;
+  color: #FFF;
+  background-color: var(--color-blue);
+  position: relative;
+  font-size: inherit;
+}
+
+section.about .topic2 h2 span {
+  margin-right: 0;
+  margin-left: .4rem;
+  background-color: var(--color-orange);
+}
+
+section.about .topic1 h2 span::before {
+  content: "";
+  position: absolute;
+  width: .8rem;
+  height: .8rem;
+  top: 0;
+  left: 0;
+  transform: translate(-100%, -100%);
+  background-color: var(--color-blue);
+}
+
+section.about .topic2 h2 span::before {
+  content: "";
+  position: absolute;
+  width: .8rem;
+  height: .8rem;
+  top: 0;
+  right: 0;
+  transform: translate(100%, -100%);
+  background-color: var(--color-orange);
+}
+
+section.about p {
+  font-size: .5rem;
+  font-weight: bold;
+}
+
+section.about .topic1 {
+  text-align: left;
+  position: relative;
+}
+
+section.about .topic2 {
+  text-align: right;
+  position: relative;
+}
+
+section.about .topic1 .panel::before {
+  content: "";
+  width: 20%;
+  height: 100%;
+  background-color: #F9F9F9;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+
+section.about .topic2 .panel::before {
+  content: "";
+  width: 20%;
+  height: 100%;
+  background-color: #F9F9F9;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
+
+section.about .topic1 img,
+section.about .topic2 img {
+  width: 50%;
+}
+
+section.about .topic1 img {
+  border-radius: 0 10px 10px 0;
+}
+
+section.about .topic2 img {
+  border-radius: 10px 0 0 10px;
+}
+
+section.about .panel {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 55%;
+  background-color: #FFF;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+section.about .topic1 .panel {
+  padding: 2.3rem 1.5rem 1.5rem 2.3rem;
+  right: 0;
+}
+
+section.about .topic2 .panel {
+  padding: 2.3rem 2.3rem 1.5rem 1.5rem;
+  left: 0;
+}
+
+section.about ul {
+  display: flex;
+  margin-left: -2rem;
+  overflow: hidden;
+}
+
+section.about ul li {
+  margin-right: .3rem;
+}
+
+section.about ul li img {
+  height: 5rem;
+}
+
+
+
+section.news {
+  background-color: #F9F9F9;
+}
+
+section.news h1 {
+  top: 0;
+}
+
+section.news ul {
+  max-width: 1000px;
+  width: calc(100% - 30px);
+  margin: 0 auto;
+  font-size: 18px;
+  position: relative;
+}
+
+section.news ul li {
+  line-height: 3.5em;
+  border-bottom: 1px solid #CECECE;
+  font-weight: bold;
+}
+
+section.news ul li a {
+  display: block;
+}
+
+section.news ul div {
+  width: 150px;
+  display: inline-block;
+}
+
+section.news .date {
+  font-weight: normal;
+  font-size: 15px;
+  margin-right: 30px;
+}
+
+section.news .label {
+  --label-color: var(--color-font);
+  font-size: 14px;
+  padding: 2px 10px;
+  border: 1px solid var(--label-color);
+  border-radius: 100px;
+  color: var(--label-color);
+}
+
+section.news .label.important {
+  --label-color: var(--color-red);
+}
+
+section.news .label.participants {
+  --label-color: var(--color-purple);
+}
+
+section.news .label.sponsor {
+  --label-color: var(--color-green);
+}
+
+section.news .title {
+  font-size: 18px;
+}
