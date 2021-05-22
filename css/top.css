@@ -23,6 +23,7 @@ p, span {
 
 a {
   text-decoration: none;
+  cursor: pointer;
 }
 
 a:visited {
@@ -208,6 +209,21 @@ section.news ul li {
 
 section.news ul li a {
   display: block;
+  padding: 0 20px;
+  position: relative;
+}
+
+section.news ul li a::before {
+  content: url("/img/top/greaterThan.svg");
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: scale(.8) translateY(-50%);
+  transition: .3s;
+}
+
+section.news ul li a:hover::before {
+  transform: scale(.8) translate(10px, -50%);
 }
 
 section.news ul div {
@@ -243,5 +259,30 @@ section.news .label.sponsor {
 }
 
 section.news .title {
-  font-size: 18px;
+  font-size: 16px;
+}
+
+section.news > div {
+  max-width: 1000px;
+  width: calc(100% - 30px);
+  margin: 0 auto;
+  text-align: right;
+}
+
+section.news a.backnumber {
+  font-size: 14px;
+  position: relative;
+  padding: 10px 20px;
+  border-radius: 100px;
+  transition: .3s;
+}
+
+section.news a.backnumber:hover {
+  background-color: #EFEFEF;
+}
+
+section.news a.backnumber::before {
+  content: url("/img/top/news-icon.svg");
+  display: inline-block;
+  margin-right: 10px;
 }

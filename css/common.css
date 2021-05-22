@@ -1,0 +1,137 @@
+footer {
+  color: white;
+  background: var(--color-orange);
+  font-size: 14px;
+  position: relative;
+  font-weight: bold;
+  font-family: "Yu Gothic", "游ゴシック", "YuGothic", "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", 'Noto Sans JP', sans-serif;
+}
+
+footer p {
+  padding: 5px 0;
+  margin: 0;
+  text-align: center;
+  font-size: 12px;
+}
+
+footer a {
+  text-decoration: none;
+  color: #FFF;
+}
+
+footer ul {
+  max-width: 1000px;
+  display: flex;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 10px;
+  list-style-type: none;
+  padding: 0;
+}
+
+footer ul.link li {
+  display: flex;
+  padding: 0 20px 0 0;
+  align-items: center;
+}
+
+footer ul.link li:not(:last-child)::after {
+  content: "";
+  height: 14px;
+  width: 1px;
+  background: #FFF;
+  display: inline-block;
+  margin-left: 20px;
+}
+
+footer ul.social-icon li {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #FFF;
+  transition: .3s;
+  cursor: pointer;
+}
+
+footer ul.social-icon li:not(:last-child) {
+  margin-right: 20px;
+}
+
+footer ul.social-icon li a {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+footer ul.social-icon li img {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+
+footer ul.social-icon li:hover img {
+  /* HACK: svgを白くさせたいのでbrightnessを上げて無理やり白くさせてる */
+  filter: brightness(10);
+}
+
+footer ul.social-icon .twitter-icon:hover {
+  background: #55acee;
+}
+
+footer ul.social-icon .facebook-icon:hover {
+  background: #3B5998;
+}
+
+footer ul.social-icon .instagram-icon {
+  position: relative;
+  overflow: hidden;
+}
+
+footer ul.social-icon .instagram-icon div {
+  position: absolute;
+  z-index: 2;
+  background: #FFF;
+  width: 60px;
+  height: 60px;
+  transition: .3s;
+}
+
+footer ul.social-icon .instagram-icon:hover div {
+  opacity: 0;
+}
+
+footer ul.social-icon .instagram-icon::before {
+  content: "";
+  width: 60px;
+  height: 60px;
+  background: -webkit-radial-gradient(#ffdb2c 10%, rgba(255, 105, 34, 0.65) 55%, rgba(255, 88, 96, 0) 70%);
+  background: radial-gradient(#ffdb2c 10%, rgba(255, 105, 34, 0.65) 55%, rgba(255, 88, 96, 0) 70%);
+  position: absolute;
+  top: 23px;
+  left: -18px;
+  z-index: 1;
+}
+
+footer ul.social-icon .instagram-icon::after {
+  content: "";
+  width: 60px;
+  height: 60px;
+  background: -webkit-linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;
+  background: linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;
+  position: absolute;
+  z-index: 0;
+  top: 0;
+}
+
+footer ul.social-icon .instagram-icon img {
+  z-index: 2;
+}
+
+footer ul.social-icon .youtube-icon:hover {
+  background: #FF0000;
+}
