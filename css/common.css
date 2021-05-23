@@ -1,3 +1,42 @@
+:root {
+  --color-font: #404040;
+  --color-blue: #67B6FF;
+  --color-orange: #ECA83E;
+  --color-red: #FA5454;
+  --color-purple: #8F73FF;
+  --color-green: #30F3AC;
+}
+
+.topic-path {
+  background-color: var(--color-orange);
+  line-height: 1.5em;
+  font-size: 14px;
+  color: #FFF;
+}
+
+.topic-path ol {
+  max-width: 1000px;
+  width: calc(100% - 30px);
+  margin: 0 auto;
+  display: flex;
+  list-style-type: none;
+  padding: 10px 0;
+}
+
+.topic-path ol li {
+  margin-right: 20px;
+}
+
+.topic-path ol li:not(:last-of-type)::after {
+  content: url("/img/common/icon/topicPath.svg");
+  transform: scale(1.2) translate(8px, -1px);
+  display: inline-block;
+}
+
+.topic-path ol a {
+  color: #FFF;
+}
+
 footer {
   color: white;
   background: var(--color-orange);

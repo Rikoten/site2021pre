@@ -59,6 +59,7 @@ section {
 section.link {
   --font-size-vh: 34vh / 100;
   display: flex;
+  padding: 0;
 }
 
 section.link > a {
