@@ -273,7 +273,7 @@ section.quiz div p {
 section.quiz ul.open::before {
   content: url("/img/demo/triangle.svg");
   position: absolute;
-  bottom: -42.5px;
+  bottom: -39.5px;
   left: 50%;
   transform: translateX(-50%) scaleY(0.7);
 }

@@ -112,6 +112,9 @@ section.about h2 {
   margin: 0;
 }
 
+section.about .topic2 h2 {
+  text-align: left;
+}
 
 section.about h2 span {
   padding: .1rem .4rem;
@@ -208,6 +211,10 @@ section.about .panel {
   background-color: #FFF;
   box-sizing: border-box;
   border-radius: 10px;
+}
+
+section.about .panel p {
+  text-align: justify;
 }
 
 section.about .topic1 .panel {
@@ -336,4 +343,110 @@ section.news a.backnumber::before {
   content: url("/img/top/icon/news-icon.svg");
   display: inline-block;
   margin-right: 10px;
+}
+
+@media screen and (max-width: 576px) {
+  h1 {
+    font-size: 60px;
+  }
+
+  section.link > a {
+    min-height: 0;
+  }
+
+  section.link a > div {
+    transform: scale(1.5);
+  }
+
+  p.lead {
+    margin-bottom: 30px;
+    line-height: 2em;
+  }
+
+  section.about > div {
+    margin-bottom: 14rem;
+  }
+
+  section.about .topic1 img,
+  section.about .topic2 img {
+    width: 90%;
+  }
+
+  section.about h2 {
+    font-size: 22px;
+  }
+
+  section.about p {
+    font-size: 14px;
+  }
+
+  section.about .panel {
+    top: 80%;
+    transform: none;
+    width: 90%;
+  }
+
+  section.about .topic1 .panel {
+    padding: 3.2rem 2.5rem 2rem 3.7rem;
+  }
+
+  section.about .topic2 .panel {
+    padding: 3.2rem 2.5rem 2rem 2rem;
+  }
+ 
+  section.about .topic1 .panel::before,
+  section.about .topic2 .panel::before {
+    z-index: 0;
+  }
+
+  section.about .panel h2,
+  section.about .panel p {
+    position: relative;
+    z-index: 1;
+  }
+
+  section.about .topic1 h2 span::before,
+  section.about .topic2 h2 span::before {
+    width: 13px;
+    height: 13px;
+  }
+
+  section.about ul li img {
+    height: 7rem;
+  }
+
+
+
+
+  section.news ul li {
+    line-height: 1.7em;
+    margin-right: -15px;
+  }
+
+  section.news ul li a {
+    display: block;
+    padding: 10px 20px 10px 30px;
+  }
+
+  section.news ul li a:hover::before {
+    transform: scale(.8) translateY(-50%);
+  }
+
+  section.news .date {
+    font-size: 14px;
+  }
+
+  section.news .title {
+    display: block;
+    font-size: 14px;
+  }
+
+  section.news > div {
+    margin-top: 20px;
+    width: 100%;
+  }
+
+  section.news a.backnumber:hover {
+    background-color: inherit;
+}
 }
