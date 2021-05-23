@@ -4,17 +4,23 @@
   --color-purple: #8F73FF;
 }
 
+main {
+  max-width: 1050px;
+  width: calc(100% - 30px);
+  margin: 0 auto;
+}
+
 iframe {
   border: none;
   box-shadow: 0px 3px 16px -6px rgba(0,0,0,0.25);
   border-radius: 10px;
-  width: 1050px;
+  width: 0;
   height: 1000px;
   transition: all 0.5s cubic-bezier(0, 0, 0.07, 1) 0s;
 }
 
 div.wrapper {
-  width: 1050px;
+  width: 100%;
   margin: 0 auto;
   text-align: center;
 }
@@ -22,12 +28,13 @@ div.wrapper {
 div.view-mode {
   display: flex;
   justify-content: center;
-  width: 1050px;
+  width: 100%;
   margin: 50px 0 20px;
 }
 
 div.view-mode button {
-  width: 200px;
+  max-width: 200px;
+  width: calc(50% - 40px);
   height: 45px;
   border: 1px solid var(--color-purple);
   background-color: #FFF;
@@ -49,9 +56,9 @@ div.view-mode button:not(.active):hover {
   box-shadow: 0px 3px 16px -6px rgba(0,0,0,0.25);
 }
 
-ul {
+ul.option {
   list-style-type: none;
-  padding: 10px 30px 30px;
+  padding: 10px 30px 20px;
   display: flex;
   flex-wrap: wrap;
   background-color: rgba(143, 115, 255, .1);
@@ -59,11 +66,15 @@ ul {
   border-radius: 10px;
 }
 
-ul li:not(:last-of-type) {
+ul.option li {
+  margin-bottom: 10px;
+}
+
+ul.option li:not(:last-of-type) {
   margin-right: 40px;
 }
 
-ul p {
+ul.option p {
   flex-basis: 100%;
   text-align: left;
   font-weight: bold;
@@ -174,4 +185,14 @@ input[type=checkbox]:not(.switch):checked, input[type=radio]:not(.switch):checke
 
 label {
   user-select: none;
+}
+
+@media screen and (max-width: 1080px) {
+  iframe {
+    margin-left: -10px;
+  }
+
+  div.view-mode {
+    display: none;
+  }
 }

@@ -1,17 +1,40 @@
 const iframe = document.querySelector("iframe");
-
-window.addEventListener('load', () => {
-  const DE = iframe.contentWindow.document.documentElement;
-
-  iframe.style.height = DE.scrollHeight + 100 + "px";
-});
-
 const PCVer = document.querySelector(".view-mode .pc");
 const MBVer = document.querySelector(".view-mode .mobile");
 
+const justifyIframe = (offset, width) => {
+  const DE = iframe.contentWindow.document.documentElement;
+  iframe.style.transition = "none";
+
+  if(width) iframe.style.width = width + "px";
+  else {
+    if(window.innerWidth < 1080) {
+      if (navigator.userAgent.match(/iPhone|Android.+Mobile/)) {
+        iframe.style.width = window.innerWidth - 10 + "px";
+      } else {
+        iframe.style.width = window.innerWidth - 25 + "px";
+      }
+
+      const active = document.querySelector(".view-mode .active");
+      active.classList.remove("active");
+      PCVer.classList.add("active");
+    } else {
+      iframe.style.width = 1050 + "px";
+    }
+  }
+
+  const bottom = DE.getBoundingClientRect().bottom;
+  iframe.style.height = bottom + offset + "px";    
+
+  iframe.style.transition = "all 0.5s cubic-bezier(0, 0, 0.07, 1) 0s";
+}
+
+window.addEventListener('load', () => justifyIframe(70));
+window.addEventListener('resize', () => justifyIframe(0));
+
 PCVer.addEventListener("click", () => {
   if(!PCVer.classList.contains("active")) {
-    iframe.style.width = "1050px";
+    justifyIframe(0, 1050);
     MBVer.classList.remove("active");
     PCVer.classList.add("active");
   }
@@ -19,7 +42,7 @@ PCVer.addEventListener("click", () => {
 
 MBVer.addEventListener("click", () => {
   if(!MBVer.classList.contains("active")) {
-    iframe.style.width = "375px";
+    justifyIframe(0, 375);
     PCVer.classList.remove("active");
     MBVer.classList.add("active");
   }

@@ -182,7 +182,7 @@ section.quiz ul {
 section.quiz li {
   width: 200px;
   margin-top: 20px;
-  padding: 5px 60px;
+  padding: 10px 60px;
   background-color: #FFF;
   border-radius: 10px;
   text-align: center;
@@ -247,7 +247,7 @@ section.quiz div {
   overflow: hidden;
   border-top: 1px solid #E4E4E4;
   border-bottom: 0px solid #E4E4E4;
-  transition: 0.8s;
+  transition: height 0.8s, padding-top 0.8s, padding-bottom 0.8s;
   box-sizing: border-box;
 }
 

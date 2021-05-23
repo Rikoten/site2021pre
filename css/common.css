@@ -7,6 +7,10 @@
   --color-green: #30F3AC;
 }
 
+body {
+  margin: 0;
+}
+
 .topic-path {
   background-color: var(--color-orange);
   line-height: 1.5em;
@@ -35,6 +39,8 @@
 
 .topic-path ol a {
   color: #FFF;
+  text-decoration: none;
+  font-weight: normal;
 }
 
 footer {
