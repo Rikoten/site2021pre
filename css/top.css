@@ -56,6 +56,57 @@ section {
   position: relative;
 }
 
+section.link {
+  --font-size-vh: 34vh / 100;
+  display: flex;
+}
+
+section.link > a {
+  width: 50%;
+  height: 34vh;
+  min-height: 250px;
+  font-weight: bold;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+section.link div img {
+  height: 2rem;
+}
+
+section.link div p:first-of-type {
+  font-size: .7rem;
+  line-height: 1em;
+  margin: .2rem 0 .1rem;
+}
+
+section.link div p:last-of-type {
+  font-size: 1.5rem;
+  line-height: 1em;
+  margin: 0;
+}
+
+section.link .participants {
+  background-color: var(--color-orange);
+  color: #FFF;
+}
+
+section.link .sponsor {
+  background-color: #FFF;
+  color: var(--color-orange);
+}
+
+section.link a > div {
+  transition: .3s;
+}
+
+section.link a:hover > div {
+  transform: scale(1.05);
+}
+
 section.about h2 {
   font-size: 1.2rem;
   margin: 0;
@@ -214,7 +265,7 @@ section.news ul li a {
 }
 
 section.news ul li a::before {
-  content: url("/img/top/greaterThan.svg");
+  content: url("/img/top/icon/greaterThan.svg");
   position: absolute;
   top: 50%;
   right: 20px;
@@ -282,7 +333,7 @@ section.news a.backnumber:hover {
 }
 
 section.news a.backnumber::before {
-  content: url("/img/top/news-icon.svg");
+  content: url("/img/top/icon/news-icon.svg");
   display: inline-block;
   margin-right: 10px;
 }
