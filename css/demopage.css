@@ -203,7 +203,7 @@ section.quiz li.correct {
 
 section.quiz li.correct::before {
   content: "";
-  background: url("/img/demo/iconset.svg");
+  background: url("../img/demo/iconset.svg");
   background-position: -120px 0px;
   background-size: 180px 120px;
   width: 30px;
@@ -225,7 +225,7 @@ section.quiz li.incorrect {
 
 section.quiz li.incorrect::before {
   content: "";
-  background: url("/img/demo/iconset.svg");
+  background: url("../img/demo/iconset.svg");
   background-position: -150px 0px;
   background-size: 180px 120px;
   width: 30px;
@@ -271,7 +271,7 @@ section.quiz div p {
 }
 
 section.quiz ul.open::before {
-  content: url("/img/demo/triangle.svg");
+  content: url("../img/demo/triangle.svg");
   position: absolute;
   bottom: -39.5px;
   left: 50%;

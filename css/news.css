@@ -17,7 +17,7 @@ h1{
 }
 
 h1::before{
-    content: url(/img/notice/announce.svg);
+    content: url("../img/notice/announce.svg");
     position: absolute;
     left: -45px;
     height: 50px;
