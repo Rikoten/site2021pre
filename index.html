@@ -1,12 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang='ja'>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     <title>Document</title>
+
+    <link rel='stylesheet' href='./css/header.css'>
+    <link rel='stylesheet' href='./css/index.css'>
+    <link rel='prefetch' href='./data/header-images.json'>
+
+    <meta data-name='header-image-path' data-content='./img/header/'>
 </head>
 <body>
-    
+    <div class='header'>
+        <div class='image-wrap'></div>
+        <div class='text'>
+            <p>68th</p>
+            <p>Rikoten</p>
+            <p><span>11.6</span><span>SAT</span><span>-</span><span>11.7</span><span>SUN</span></p>
+
+            <div class='page-title-wrap'><div class='page-title'>参加団体</div></div>
+        </div>
+    </div>
+
+    <script async defer src='./js/header.js' data-header-type='index'></script>
 </body>
 </html>
