@@ -25,7 +25,11 @@ let retryCount = 0
     }
 
     const jsonPath = imagesJsonPrefetchLinkEl.getAttribute('href')
-    const images = await fetch(jsonPath).then(res => res.json())
+    const images = await fetch(jsonPath)
+        .then(res => res.json())
+        .catch(() => {
+            retry()
+        })
 
     const headerTypeEl = Array
         .from(document.getElementsByTagName('script'))
@@ -42,6 +46,40 @@ let retryCount = 0
         throw 'Invalid value for data-header-type attribute. Value must be within `index`, `news` or `participants`.'
     }
 
-    console.log(images)
-    console.log(headerType)
+    const imagesForCurrentPage = images.filter(it => it.place == headerType)
+
+    const imagePathBase = document.querySelector('meta[data-name=header-image-path]')?.getAttribute('data-content')
+    if (!imagePathBase) {
+        throw '<meta data-name=header-image-path> must be exist.'
+    }
+
+    for (const image of imagesForCurrentPage) {
+        const path = imagePathBase + image.file
+        const link = document.createElement('link')
+        link.rel = 'prefetch'
+        link.href = path
+        document.head.appendChild(link)
+    }
+
+    const setImage = (image) => {
+        if (!image) {
+            console.error('image undefined')
+            return
+        }
+        const imageElement = document.createElement('img')
+        imageElement.src = imagePathBase + image.file
+        imageWrapper.innerHTML = ''
+        imageWrapper.appendChild(imageElement)
+    }
+
+    setImage(imagesForCurrentPage[0])
+
+    let currentImage = 0
+    setInterval(() => {
+        currentImage += 1
+        if (currentImage >= imagesForCurrentPage.length) {
+            currentImage = 0
+        }
+        setImage(imagesForCurrentPage[currentImage])
+    }, 3000)
 })()
