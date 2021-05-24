@@ -1,0 +1,72 @@
+body{
+    background-color: #F9F3AF;
+    max-width: 900px;
+    font-family: "Yu Gothic", 游ゴシック, YuGothic, 游ゴシック体, "ヒラギノ角ゴ Pro W3", メイリオ, sans-serif;
+    font-weight: bold;
+    margin :auto;
+}
+body h2{
+    color: #ECA83E;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-left: 30px;
+}
+body h3{
+    color: #ECA83E;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-left: 50px;
+}
+body p{
+    font-size: 18px;
+    color: #ECA83E;
+}
+body div{
+    position:relative;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ECA83E;
+}
+body div::before{
+    content: url("../img/sponsor/pdf.svg");
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    top: 0px;
+    left:400px;
+}
+.shakehands{
+    position: relative;
+}
+.shakehands::before{
+    content: url("../img/sponsor/handshake.svg");
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top: 0px;
+    left: -60px;
+}
+
+.Hexagon{
+    position: relative;
+}
+.Hexagon::before{
+    content: url("../img/participants/hexagon.svg");
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top: 0px;
+    left:-40px;
+}
+
+.Triangle{
+    position: relative;
+}
+.Triangle::before{
+    content: url("../img/notice/triangle.svg");
+    position: absolute;
+    top: 0px;
+    left:-30px;
+}
+

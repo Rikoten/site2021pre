@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>demo</title>
+  <link href = "/css/demo.css" rel = "stylesheet">
+  <link href ="/css/common.css" rel = "stylesheet">
+</head>
+<body>
+  <div style = "height: 66vh; background-color: #ccc;"></div>
+  <div class = "topic-path">
+    <ol>
+        <li><a href = "/">トップ</a></li>
+        <li><a href = "/participants/">参加団体</a></li>
+        <li><a href = "/participants/demo/">企画記事ページデモ</a></li>
+    </ol>
+  </div>
+
+  <main>
+    <div class = "wrapper">
+      <div class = "contents">
+        <button class = "active article">独自の企画記事</button>
+        <button class = "appeal">アピールポイント</button>
+      </div>
+
+      <ul class = "option">
+        <p>表示オプション</p>
+        <li>
+          <input id="c1" type="checkbox">
+          <label for="c1">説明を常時表示</label>
+        </li>
+        <li>
+          <input id="c2" type="checkbox">
+          <label for="c2">メイン動画を表示しない</label>
+        </li>
+        <li class = "mobile-ver">
+          <input id="c3" type="checkbox">
+          <label for="c3">スマホ版表示</label>
+        </li>
+      </ul>
+
+      <iframe id="inlineFrameExample" scrolling="no" title="Inline Frame Example" width="300" height="200" src="/participants/demo/demopage.html"></iframe>
+    </div>
+  </main>
+
+  <footer>
+    <p>official SNS</p>
+    <ul class = "social-icon">
+      <li class = "twitter-icon"><a href="https://twitter.com/rikoten_waseda" target="_blank" rel = "noopener"><img src = "/img/common/icon/twitter.svg"></a></li>
+      <li class = "facebook-icon"><a href="https://www.facebook.com/WasedaRikoten" target="_blank" rel = "noopener"><img src = "/img/common/icon/facebook.svg"></a></li>
+      <li class = "instagram-icon"><div></div><a href="https://www.instagram.com/waseda_rikoten/" target="_blank" rel = "noopener"><img src = "/img/common/icon/instagram.svg"></a></li>
+      <li class = "youtube-icon"><a href="https://www.youtube.com/channel/UCdBEdqUB9DvgHShFqzxswdA" target="_blank" rel = "noopener"><img src = "/img/common/icon/youtube.svg"></a></li>
+    </ul>
+    <p>Copyright © 2002-2021 理工展連絡会 All Rights Reserved.</p>
+  </footer>
+  <script src = "/js/demo.js" type = "text/javascript"></script>
+</body>
+</html>
