@@ -40,6 +40,11 @@ main li{
     line-height: 45px;
 }
 
+main a {
+    text-decoration: none;
+    color: var(--color-blue);
+}
+
 .gray{
     background-color: #F3F3F3;
 }
@@ -85,6 +90,7 @@ ul{
     margin-bottom: 20px;
     line-height: 40px;
     text-align: center;
+    font-weight: bold;
 }
 
 .schedule-table-event{
@@ -116,7 +122,6 @@ h4{
     /*padding-left: 30px;*/
     font-size: 18px;
     font-weight: bold;
-    margin-top: 30px;
     margin-bottom: 20px;
 }
 /*h4::before{
@@ -238,11 +243,12 @@ h4{
 }
 
 
-p {
+main p {
     margin-top: 0px;
     text-align: justify;
     font-size: 16px;
     font-weight: normal;
+    word-break: break-all;
 }
 
 .documents > div > div{
@@ -254,11 +260,6 @@ p {
     font-weight: normal;
 }
 
-a{
-    text-decoration: none;
-    color: black;
-}
-
 .documents>div>div{
     margin-top: 20px;
     transition: .3s;
@@ -267,6 +268,7 @@ a{
 .documents > div > div a {
     display: block;
     padding: 0 20px 0 60px;
+    color: var(--color-font);
 }
 
 .documents > div > div:hover{
@@ -285,6 +287,23 @@ a{
 
 .documents > div > div:hover::before {
     filter: brightness(10);
+}
+
+@media screen and (min-width: 1000px) {
+    h4 {
+        margin-top: 0;
+    }
+
+    .documents > div > div{
+        background-color: #FFF;
+    }
+
+    .documents > div {
+        background-color: #F3F3F3;
+        border-radius: 10px;
+        margin-bottom: 30px;
+        padding: 20px 30px;
+    }
 }
 
 
@@ -341,9 +360,7 @@ a{
         background-color: #ECA83E;
         border-radius: 50px;
         width: 45%;
-        height: 40px;
         margin-bottom: 20px;
-        line-height: 40px;
         text-align: center;
     }
 
@@ -352,10 +369,11 @@ a{
         border: 1px solid #ECA83E;
         border-radius: 50px;
         width: 45%;
-        height: 40px;
+        height: 35px;
         margin-bottom: 20px;
-        line-height: 40px;
+        line-height: 35px;
         text-align: center;
+        font-size: 14px;
     }
     .title{
         width: 45%;        
@@ -394,12 +412,14 @@ a{
     main p{
         width: calc(100% - 30px);
         margin: 20px auto 0px auto;
+        font-size: 14px;
     }
 
 
     main ul{
         padding: 0px;
         margin: 0px;
+        font-size: 14px;
     }
 
     main h4{
@@ -407,4 +427,15 @@ a{
         margin: 40px auto 20px auto;
     }
 
+    .documents > div > div:hover{
+        background-color: #F3F3F3;
+    }
+    
+    .documents > div > div:hover a {
+        color: var(--color-font);
+    }
+
+    .documents > div > div:hover::before {
+        filter: none;
+    }
 }

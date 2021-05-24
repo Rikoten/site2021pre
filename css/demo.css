@@ -16,7 +16,6 @@ iframe {
   border-radius: 10px;
   width: 0;
   height: 1000px;
-  transition: all 0.5s cubic-bezier(0, 0, 0.07, 1) 0s;
 }
 
 div.wrapper {
@@ -25,14 +24,14 @@ div.wrapper {
   text-align: center;
 }
 
-div.view-mode {
+div.contents {
   display: flex;
   justify-content: center;
   width: 100%;
   margin: 50px 0 20px;
 }
 
-div.view-mode button {
+div.contents button {
   max-width: 200px;
   width: calc(50% - 40px);
   height: 45px;
@@ -46,13 +45,13 @@ div.view-mode button {
   outline: none;
 }
 
-div.view-mode button.active {
+div.contents button.active {
   background-color: var(--color-purple);
   color: #FFF;
   cursor: auto;
 }
 
-div.view-mode button:not(.active):hover {
+div.contents button:not(.active):hover {
   box-shadow: 0px 3px 16px -6px rgba(0,0,0,0.25);
 }
 
@@ -192,7 +191,14 @@ label {
     margin-left: -10px;
   }
 
-  div.view-mode {
+  ul.option li.mobile-ver {
     display: none;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  div.contents button {
+    width: calc(50% - 10px);
+    margin: 0 5px;
   }
 }

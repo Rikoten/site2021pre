@@ -1,10 +1,11 @@
 const iframe = document.querySelector("iframe");
-const PCVer = document.querySelector(".view-mode .pc");
-const MBVer = document.querySelector(".view-mode .mobile");
+const articleVer = document.querySelector(".contents .article");
+const appealVer = document.querySelector(".contents .appeal");
 
-const justifyIframe = (offset, width) => {
+const justifyIframe = (bottomOffset, width) => {
   const DE = iframe.contentWindow.document.documentElement;
-  iframe.style.transition = "none";
+  const check3 = document.getElementById("c3");
+  if(check3.checked && window.innerWidth >= 1080) width = 375;
 
   if(width) iframe.style.width = width + "px";
   else {
@@ -15,39 +16,58 @@ const justifyIframe = (offset, width) => {
         iframe.style.width = window.innerWidth - 25 + "px";
       }
 
-      const active = document.querySelector(".view-mode .active");
-      active.classList.remove("active");
-      PCVer.classList.add("active");
+      if(check3.checked) {
+        check3.checked = false;
+      }
     } else {
       iframe.style.width = 1050 + "px";
     }
   }
-
+  
   const bottom = DE.getBoundingClientRect().bottom;
-  iframe.style.height = bottom + offset + "px";    
-
-  iframe.style.transition = "all 0.5s cubic-bezier(0, 0, 0.07, 1) 0s";
+  iframe.style.height = bottom + bottomOffset + "px";
 }
 
-window.addEventListener('load', () => justifyIframe(70));
+window.addEventListener('load', () => justifyIframe(50));
 window.addEventListener('resize', () => justifyIframe(0));
 
-PCVer.addEventListener("click", () => {
-  if(!PCVer.classList.contains("active")) {
-    justifyIframe(0, 1050);
-    MBVer.classList.remove("active");
-    PCVer.classList.add("active");
+
+/****** 表示コンテンツの切り替え ******/
+
+const changeContents = () => {
+  const iframeDoc = iframe.contentWindow.document;
+  const section = iframeDoc.querySelectorAll("section");
+  const c3 = iframeDoc.getElementById("c3");
+
+  for(const sec of section) {
+    if(sec.classList.contains("active")) sec.classList.remove("active");
+    else sec.classList.add("active");
+    c3.dispatchEvent(e);
+  }
+  justifyIframe(0)
+}
+
+articleVer.addEventListener("click", () => {
+  if(!articleVer.classList.contains("active")) {
+    changeContents();
+    appealVer.classList.remove("active");
+    articleVer.classList.add("active");
   }
 });
 
-MBVer.addEventListener("click", () => {
-  if(!MBVer.classList.contains("active")) {
-    justifyIframe(0, 375);
-    PCVer.classList.remove("active");
-    MBVer.classList.add("active");
+appealVer.addEventListener("click", () => {
+  if(!appealVer.classList.contains("active")) {
+    changeContents();
+    articleVer.classList.remove("active");
+    appealVer.classList.add("active");
   }
 });
 
+
+/****** 表示オプション ******/
+
+let e = document.createEvent("HTMLEvents");
+e.initEvent("change", true, true);
 
 const check1 = document.getElementById("c1");
 
@@ -66,8 +86,6 @@ check1.addEventListener("change", () => {
   }
 });
 
-let e = document.createEvent("HTMLEvents");
-e.initEvent("change", true, true);
 const check2 = document.getElementById("c2");
 
 check2.addEventListener("change", () => {
@@ -91,13 +109,6 @@ check2.addEventListener("change", () => {
 const check3 = document.getElementById("c3");
 
 check3.addEventListener("change", () => {
-  const iframeDoc = iframe.contentWindow.document;
-  const section = iframeDoc.querySelectorAll("section");
-  const c3 = iframeDoc.getElementById("c3");
-
-  for(const sec of section) {
-    if(sec.classList.contains("active")) sec.classList.remove("active");
-    else sec.classList.add("active");
-    c3.dispatchEvent(e);
-  }
+  if(check3.checked) justifyIframe(50, 375);
+  else justifyIframe(0, 1050);
 });

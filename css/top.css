@@ -359,6 +359,10 @@ section.news a.backnumber::before {
     transform: scale(1.5);
   }
 
+  section.link a:hover > div {
+    transform: scale(1.5);
+  }
+
   p.lead {
     margin-bottom: 30px;
     line-height: 2em;
