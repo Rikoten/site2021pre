@@ -108,6 +108,40 @@ section.link a:hover > div {
   transform: scale(1.05);
 }
 
+section.latest-news {
+  padding: 0;
+  border-bottom: 1px solid #CECECE;
+  font-size: 16px;
+}
+
+section.latest-news > div {
+  max-width: 1000px;
+  width: calc(100% - 30px);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+section.latest-news span {
+  font-size: 14px;
+}
+
+section.latest-news a div {
+  display: inline-block;
+}
+
+section.latest-news span.title {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+section.latest-news a:first-of-type {
+  margin-right: auto;
+  line-height: 4em;
+}
+
+
+
 section.about h2 {
   font-size: 1.2rem;
   margin: 0;
@@ -266,6 +300,7 @@ section.news ul li {
   font-weight: bold;
 }
 
+section.latest-news a:first-of-type,
 section.news ul li a {
   display: block;
   padding: 0 20px;
@@ -285,17 +320,20 @@ section.news ul li a:hover::before {
   transform: scale(.8) translate(10px, -50%);
 }
 
+section.latest-news a div, 
 section.news ul div {
   width: 150px;
   display: inline-block;
 }
 
+section.latest-news .date,
 section.news .date {
   font-weight: normal;
-  font-size: 15px;
+  font-size: 14px;
   margin-right: 30px;
 }
 
+section.latest-news .label,
 section.news .label {
   --label-color: var(--color-font);
   font-size: 14px;
@@ -305,14 +343,17 @@ section.news .label {
   color: var(--label-color);
 }
 
+section.latest-news .label.important,
 section.news .label.important {
   --label-color: var(--color-red);
 }
 
+section.latest-news .label.participants,
 section.news .label.participants {
   --label-color: var(--color-purple);
 }
 
+section.latest-news .label.sponsor,
 section.news .label.sponsor {
   --label-color: var(--color-green);
 }
@@ -328,6 +369,7 @@ section.news > div {
   text-align: right;
 }
 
+section.latest-news a.backnumber,
 section.news a.backnumber {
   font-size: 14px;
   position: relative;
@@ -336,10 +378,12 @@ section.news a.backnumber {
   transition: .3s;
 }
 
+section.latest-news a.backnumber:hover,
 section.news a.backnumber:hover {
   background-color: #EFEFEF;
 }
 
+section.latest-news a.backnumber::before,
 section.news a.backnumber::before {
   content: url("/img/top/icon/news-icon.svg");
   display: inline-block;
@@ -435,10 +479,6 @@ section.news a.backnumber::before {
 
   section.news ul li a:hover::before {
     transform: scale(.8) translateY(-50%);
-  }
-
-  section.news .date {
-    font-size: 14px;
   }
 
   section.news .title {
