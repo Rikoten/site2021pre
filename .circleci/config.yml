@@ -45,7 +45,7 @@ jobs:
       - run:
           name: Deploy
           command: |
-            rsync -avr --delete --exclude-from=excludes -e "ssh -p ${PORT}" /tmp/site2021pre ${USER_NAME}@${HOST_NAME}:/var/www/pre.rikoten.com2
+            rsync -avr --delete --exclude-from=excludes -e "ssh -p ${PORT}" /tmp/site2021pre ${USER_NAME}@${HOST_NAME}:/var/www/pre.rikoten.com
 workflows:
   version: 2
   deploy:
