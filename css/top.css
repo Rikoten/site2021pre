@@ -455,6 +455,7 @@ section.news a.backnumber::before {
   section.latest-news a:first-of-type {
     line-height: 2em;
     padding: 10px 0;
+    width: 100%;
   }
 }
 
