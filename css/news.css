@@ -7,7 +7,7 @@
     font-family: "Yu Gothic", 游ゴシック, YuGothic, 游ゴシック体, "ヒラギノ角ゴ Pro W3", メイリオ, sans-serif;
     max-width: 1000px;
     width: calc(100% - 15px);
-    margin: 0 auto;
+    margin: 50px auto;
 }
 
 h1{
@@ -68,17 +68,30 @@ h2{
     /*justify-content: space-between;*/
 }
 
-.name{
-    border: 2px solid #FA5454;
+.label{
+    --label-color: var(--color-font);
+    border: 1px solid var(--label-color);
     margin-left: 30px;
     text-align: center;
     vertical-align: middle;
-    padding: 0px 8px 0px 8px;
-    color: #FA5454;
+    padding: 2px 10px;
+    color: var(--label-color);
     border-radius: 20px;
     font-weight: bold;
     font-size: 14px;
     height: 20px;
+}
+
+.label.important {
+    --label-color: var(--color-red);
+}
+
+.label.participants {
+    --label-color: var(--color-purple);
+}
+
+.label.sponsor {
+    --label-color: var(--color-green);
 }
 
 p{
@@ -100,3 +113,6 @@ a{
     text-decoration: none;
 }
 
+#link_list a {
+    color: var(--color-blue);
+}

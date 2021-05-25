@@ -52,7 +52,7 @@ p.lead {
 }
 
 section {
-  padding: 3rem 0;
+  padding: 2.5rem 0;
   position: relative;
 }
 
@@ -100,12 +100,36 @@ section.link .sponsor {
   color: var(--color-orange);
 }
 
-section.link a > div {
+section.link a.participants {
+  background: var(--color-orange);
+}
+
+section.link a.participants::before,
+section.link a.sponsor::before {
+  content: "";
+  width: inherit;
+  height: inherit;
+  position: absolute;
+  top: 0;
+  left: 0;
   transition: .3s;
 }
 
-section.link a:hover > div {
-  transform: scale(1.05);
+section.link a.participants::before {
+  background: no-repeat center/30% url("/img/top/icon/participants.svg");
+}
+
+section.link a.participants:hover::before {
+  background: no-repeat center/31.5% url("/img/top/icon/participants.svg");
+}
+
+section.link a.sponsor::before {
+  left: 50%;
+  background: no-repeat center/15% url("/img/top/icon/sponsor.svg");
+}
+
+section.link a.sponsor:hover::before {
+  background: no-repeat center/15.75% url("/img/top/icon/sponsor.svg");
 }
 
 section.latest-news {
@@ -341,6 +365,7 @@ section.news .label {
   border: 1px solid var(--label-color);
   border-radius: 100px;
   color: var(--label-color);
+  font-weight: bold;
 }
 
 section.latest-news .label.important,
@@ -369,6 +394,10 @@ section.news > div {
   text-align: right;
 }
 
+section.latest-news a.backnumber {
+  line-height: 1em;
+}
+
 section.latest-news a.backnumber,
 section.news a.backnumber {
   font-size: 14px;
@@ -390,6 +419,16 @@ section.news a.backnumber::before {
   margin-right: 10px;
 }
 
+@media screen and (max-width: 800px) {
+  section.link a.participants::before {
+    background: no-repeat center/45% url("/img/top/icon/participants.svg");
+  }
+  
+  section.link a.sponsor::before {
+    background: no-repeat center/22.5% url("/img/top/icon/sponsor.svg");
+  }
+}
+
 @media screen and (max-width: 576px) {
   h1 {
     font-size: 60px;
@@ -399,12 +438,12 @@ section.news a.backnumber::before {
     min-height: 0;
   }
 
-  section.link a > div {
-    transform: scale(1.5);
+  section.link a.participants::before {
+    background: no-repeat center/60% url("/img/top/icon/participants.svg");
   }
-
-  section.link a:hover > div {
-    transform: scale(1.5);
+  
+  section.link a.sponsor::before {
+    background: no-repeat center/30% url("/img/top/icon/sponsor.svg");
   }
 
   p.lead {
