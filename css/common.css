@@ -32,7 +32,7 @@ body {
 }
 
 .topic-path ol li:not(:last-of-type)::after {
-  content: url("/img/common/icon/topicPath.svg");
+  content: url("../img/common/icon/topicPath.svg");
   transform: scale(1.2) translate(8px, -1px);
   display: inline-block;
 }

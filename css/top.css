@@ -308,7 +308,7 @@ section.news ul li a {
 }
 
 section.news ul li a::before {
-  content: url("/img/top/icon/greaterThan.svg");
+  content: url("../img/top/icon/greaterThan.svg");
   position: absolute;
   top: 50%;
   right: 20px;
@@ -385,7 +385,7 @@ section.news a.backnumber:hover {
 
 section.latest-news a.backnumber::before,
 section.news a.backnumber::before {
-  content: url("/img/top/icon/news-icon.svg");
+  content: url("../img/top/icon/news-icon.svg");
   display: inline-block;
   margin-right: 10px;
 }
