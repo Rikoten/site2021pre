@@ -193,13 +193,21 @@ nav .menu-close:hover .menu-close-icon::after {
   max-width: 1000px;
   width: calc(100% - 30px);
   margin: 0 auto;
-  display: flex;
   list-style-type: none;
   padding: 10px 0;
+  overflow-x: auto;
+  white-space: nowrap;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.topic-path ol::-webkit-scrollbar {
+  display:none;
 }
 
 .topic-path ol li {
   margin-right: 20px;
+  display: inline-block;
 }
 
 .topic-path ol li:not(:last-of-type)::after {
@@ -462,4 +470,35 @@ section.latest-news a.backnumber {
   content: url("../img/top/icon/news-icon.svg");
   display: inline-block;
   margin-right: 10px;
+}
+
+
+@media screen and (max-width: 576px) {
+  .news ul li {
+    line-height: 1.7em;
+    margin-right: -15px;
+  }
+
+  .news ul li a {
+    display: block;
+    padding: 10px 20px 10px 30px;
+  }
+
+  .news ul li a:hover::before {
+    transform: scale(.8) translateY(-50%);
+  }
+
+  .news .title {
+    display: block;
+    font-size: 14px;
+  }
+
+  .news > div {
+    margin-top: 20px;
+    width: 100%;
+  }
+
+  .news a.backnumber:hover {
+    background-color: inherit;
+  }
 }

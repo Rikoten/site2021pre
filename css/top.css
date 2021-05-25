@@ -43,6 +43,7 @@ h1 {
   margin: 0;
   transform: translateY(-50%);
   pointer-events: none;
+  margin-left: -0.3rem;
 }
 
 p.lead {
@@ -60,6 +61,7 @@ section.link {
   --font-size-vh: 34vh / 100;
   display: flex;
   padding: 0;
+  overflow: hidden;
 }
 
 section.link > a {
@@ -119,17 +121,14 @@ section.link a.participants::before {
   background: no-repeat center/30% url("/img/top/icon/participants.svg");
 }
 
-section.link a.participants:hover::before {
-  background: no-repeat center/31.5% url("/img/top/icon/participants.svg");
-}
-
 section.link a.sponsor::before {
   left: 50%;
   background: no-repeat center/15% url("/img/top/icon/sponsor.svg");
 }
 
+section.link a.participants:hover::before,
 section.link a.sponsor:hover::before {
-  background: no-repeat center/15.75% url("/img/top/icon/sponsor.svg");
+  transform: scale(1.05);
 }
 
 section.latest-news {
@@ -427,6 +426,19 @@ section.news a.backnumber::before {
   section.link a.sponsor::before {
     background: no-repeat center/22.5% url("/img/top/icon/sponsor.svg");
   }
+
+  section.latest-news span.title {
+    display: block;
+  }
+
+  section.latest-news a.backnumber {
+    display: none;
+  }
+
+  section.latest-news a:first-of-type {
+    line-height: 2em;
+    padding: 10px 0;
+  }
 }
 
 @media screen and (max-width: 576px) {
@@ -452,7 +464,7 @@ section.news a.backnumber::before {
   }
 
   section.about > div {
-    margin-bottom: 14rem;
+    margin-bottom: 11rem;
   }
 
   section.about .topic1 img,
@@ -505,7 +517,6 @@ section.news a.backnumber::before {
 
 
 
-
   section.news ul li {
     line-height: 1.7em;
     margin-right: -15px;
@@ -532,5 +543,17 @@ section.news a.backnumber::before {
 
   section.news a.backnumber:hover {
     background-color: inherit;
+  }
 }
+
+@media screen and (max-width: 430px) {
+  section.about > div {
+    margin-bottom: 14rem;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  section.about > div {
+    margin-bottom: 16rem;
+  }
 }
