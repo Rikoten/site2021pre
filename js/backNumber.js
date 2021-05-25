@@ -4,22 +4,9 @@ const labelName = {
   "協賛": "sponsor"
 };
 
-const latestNews = {
-  date: document.querySelector(".latest-news .date"),
-  label: document.querySelector(".latest-news .label"),
-  title: document.querySelector(".latest-news .title")
-};
-
 (async () => {
   const json = await fetch("/data/news.json").then(res => res.json()).then(res => res.reverse());
-  const latest = json[0];
   let id = json.length - 1;
-
-  latestNews.date.textContent = latest.date;
-  latestNews.title.textContent = latest.head;
-  latestNews.label.textContent = latest.label;
-  latestNews.label.classList.add(labelName[latest.label]);
-  document.querySelector(".latest-news a:first-of-type").setAttribute("href", `/news/news/?id=${id}`);
 
   const ul = document.querySelector(".news ul");
   const html = [];

@@ -41,5 +41,5 @@ const labelName = {
     document.getElementById('link_list').innerHTML = stocklist.join("");
 
     const topicPath = document.querySelector(".topic-path ol");
-    topicPath.insertAdjacentHTML("beforeend", `<li><a href = "/news/?id=${id}">${data.head}</a></li>`)
+    topicPath.insertAdjacentHTML("beforeend", `<li><a href = "/news/news/?id=${id}">${data.head}</a></li>`)
 })();

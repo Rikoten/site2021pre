@@ -11,6 +11,11 @@ body {
   margin: 0;
 }
 
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
 a {
   text-decoration: none;
   color: inherit;
@@ -346,4 +351,115 @@ footer ul.social-icon .instagram-icon img {
 
 footer ul.social-icon .youtube-icon:hover {
   background: #FF0000;
+}
+
+:not(section).news {
+  margin: 50px 0 100px;
+}
+
+section.news {
+  background-color: #F9F9F9;
+}
+
+.news h1 {
+  top: 0;
+}
+
+.news ul {
+  max-width: 1000px;
+  width: calc(100% - 30px);
+  margin: 0 auto;
+  font-size: 18px;
+  position: relative;
+}
+
+.news ul li {
+  line-height: 3.5em;
+  border-bottom: 1px solid #CECECE;
+  font-weight: bold;
+}
+
+.news ul li a {
+  display: block;
+  padding: 0 20px;
+  position: relative;
+}
+
+.news ul li a::before {
+  content: url("../img/top/icon/greaterThan.svg");
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: scale(.8) translateY(-50%);
+  transition: .3s;
+}
+
+.news ul li a:hover::before {
+  transform: scale(.8) translate(10px, -50%);
+}
+
+.news ul div {
+  width: 150px;
+  display: inline-block;
+}
+
+.news .date {
+  font-weight: normal;
+  font-size: 14px;
+  margin-right: 30px;
+}
+
+.news .label {
+  --label-color: var(--color-font);
+  font-size: 14px;
+  padding: 2px 10px;
+  border: 1px solid var(--label-color);
+  border-radius: 100px;
+  color: var(--label-color);
+  font-weight: bold;
+}
+
+.news .label.important {
+  --label-color: var(--color-red);
+}
+
+.news .label.participants {
+  --label-color: var(--color-purple);
+}
+
+.news .label.sponsor {
+  --label-color: var(--color-green);
+}
+
+.news .title {
+  font-size: 16px;
+}
+
+.news > div {
+  max-width: 1000px;
+  width: calc(100% - 30px);
+  margin: 0 auto;
+  text-align: right;
+}
+
+section.latest-news a.backnumber {
+  line-height: 1em;
+}
+
+.news a.backnumber {
+  font-size: 14px;
+  position: relative;
+  padding: 10px 20px;
+  border-radius: 100px;
+  transition: .3s;
+}
+
+.news a.backnumber:hover {
+  background-color: #EFEFEF;
+}
+
+.news a.backnumber::before {
+  content: url("../img/top/icon/news-icon.svg");
+  display: inline-block;
+  margin-right: 10px;
 }
