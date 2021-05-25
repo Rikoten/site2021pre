@@ -100,6 +100,7 @@ section.link .participants {
 section.link .sponsor {
   background-color: #FFF;
   color: var(--color-orange);
+  cursor: auto;
 }
 
 section.link a.participants {
@@ -126,9 +127,25 @@ section.link a.sponsor::before {
   background: no-repeat center/15% url("/img/top/icon/sponsor.svg");
 }
 
-section.link a.participants:hover::before,
-section.link a.sponsor:hover::before {
+section.link a.participants:hover::before
+/*section.link a.sponsor:hover::before*/ {
   transform: scale(1.05);
+}
+
+section.link .inactive::after {
+  content: "近日公開予定です";
+  width: inherit;
+  height: inherit;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  font-size: 24px;
+  font-weight: bold;
+  color: rgba(255, 255, 255, .8);
+  background-color: rgba(0,0,0,.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 section.latest-news {

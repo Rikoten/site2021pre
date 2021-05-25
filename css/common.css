@@ -182,6 +182,11 @@ nav .menu-close:hover .menu-close-icon::after {
   background-color: var(--color-orange);
 }
 
+nav .menu a.inactive {
+  color: #777;
+  cursor: auto;
+}
+
 .topic-path {
   background-color: var(--color-orange);
   line-height: 1.5em;
