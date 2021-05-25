@@ -15,7 +15,22 @@ nav {
   position: fixed;
   top: 0;
   width: 100vw;
+  height: 0;
   z-index: 10000;
+}
+
+nav .menu-close-target {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0);
+  cursor: pointer;
+  transform: translateX(100%);
+  transition: background-color .3s;
+}
+
+nav .menu-close-target.active {
+  background-color: rgba(0, 0, 0, .2);
+  transform: none;
 }
 
 nav .menu-opener {
@@ -23,14 +38,35 @@ nav .menu-opener {
   top: 20px;
   right: 40px;
   display: flex;
+  cursor: pointer;
 }
 
-nav .menu-opener .menu-opener-text {
-  margin-right: 20px;
+nav .menu-opener:hover .menu-opener-icon span {
+  background-color: var(--color-orange);
+}
+
+nav .menu-opener:hover .menu-opener-icon span:first-of-type {
+  transform: translateY(-2px);
+}
+
+nav .menu-opener:hover .menu-opener-icon span:last-of-type {
+  transform: translateY(2px);
+}
+
+nav .menu-opener .menu-opener-text,
+nav .menu-close .menu-close-text {
+  margin-right: 15px;
   color: #FFF;
   font-size: 14px;
   font-weight: bold;
   line-height: 25px;
+  transition: .3s;
+}
+
+nav .menu-opener:hover .menu-opener-text,
+nav .menu-close:hover .menu-close-text {
+  transform: translateX(-5px);
+  color: var(--color-orange);
 }
 
 nav .menu-opener-icon span {
@@ -39,6 +75,19 @@ nav .menu-opener-icon span {
   height: 5px;
   background-color: #FFF;
   border-radius: 50%;
+  transition: transform .3s;
+}
+
+nav .menu-opener-icon span:nth-child(1) {
+  transition: background-color .1s;
+}
+
+nav .menu-opener-icon span:nth-child(2) {
+  transition: background-color .2s;
+}
+
+nav .menu-opener-icon span:nth-child(3) {
+  transition: background-color .3s;
 }
 
 nav .menu-opener-icon span:not(:last-of-type) {
@@ -49,23 +98,79 @@ nav .menu {
   max-width: 400px;
   width: 100%;
   height: 100%;
-  background-color: var(--color-orange);
+  background-color: #222;
   color: #FFF;
-  font-size: 26px;
+  font-size: 24px;
   font-weight: bold;
   position: fixed;
   right: 0;
   top: 0;
   transform: translateX(100%);
+  transition: .3s;
+}
+
+nav .menu ul {
+  margin-top: 100px;
 }
 
 nav .menu ul li {
-  padding: 30px 0 30px 60px;
+  border-left: 10px solid #222;
+  padding: 20px 0 20px 60px;
+  margin-bottom: 10px;
+  cursor: pointer;
 }
 
 nav .menu ul li.active {
+  border-left: 10px solid var(--color-orange);
   color: var(--color-orange);
+}
+
+nav .menu ul li:hover {
+  color: var(--color-orange);
+}
+
+nav .menu-close {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  display: flex;
+  cursor: pointer;
+  display: flex;
+}
+
+nav .menu-close-icon {
+  position: relative;
+  transition: .3s;
+}
+
+nav .menu-close-icon::before,
+nav .menu-close-icon::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 20px;
   background-color: #FFF;
+  transition: .3s;
+}
+
+nav .menu-close-icon::before {
+  transform: rotate(45deg);
+}
+
+nav .menu-close-icon::after {
+  transform: rotate(-45deg);
+}
+
+nav .menu-close:hover .menu-close-icon {
+  transform: translateY(-3.535px);
+}
+
+nav .menu-close:hover .menu-close-icon::before,
+nav .menu-close:hover .menu-close-icon::after {
+  height: 25px;
+  background-color: var(--color-orange);
 }
 
 .topic-path {
