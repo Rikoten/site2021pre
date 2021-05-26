@@ -1,35 +1,114 @@
 body{
-    color:#ECA83E;
-    background-color: #F9F3AF;
-    max-width: 900px;
-    margin: auto;
+    color:black;
+    background-color: white;
     font-family: "Yu Gothic", 游ゴシック, YuGothic, 游ゴシック体, "ヒラギノ角ゴ Pro W3", メイリオ, sans-serif;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 16px;
+    margin: 0;
 }
 
-h2, h3, h4 {
+main {
+    max-width: 1000px;
+    margin: 0 auto 100px;
+}
+
+.participants{
+    margin: 45px 0px 0px 0px;
+}
+
+main h2, main h3, main h4 {
     margin-bottom: 8px;
 }
 
-h2{
+main h2{
     position: relative;
     padding-left: 50px;
     font-weight: 500;
     font-size: 30px;
 }
-h2::before{
+main h2::before{
     position: absolute;
     content: url(../img/participants/participants.svg);
     margin-left: -50px;
     width: 50px;
 }
 
+main li{
+    display: flex;
+    width: 460px;
+    height: auto;
+    line-height: 45px;
+}
+
+main a {
+    text-decoration: none;
+    color: var(--color-blue);
+}
+
+.gray{
+    background-color: #F3F3F3;
+}
+
+.date{
+    width:150px;
+    max-width: 50%;
+    margin-left: 30px;
+}
+
+.table{
+    display: flex;
+    justify-content: space-between;
+}
+
+ul{
+    padding-bottom: 67px;
+    margin-bottom: 0px;
+    font-weight: normal;
+}
+
+.title{
+    color: #ECA83E;
+    border: 1px solid #ECA83E;
+    border-radius: 50px;
+    width: 460px;
+    height: 40px;
+    margin-bottom: 20px;
+    line-height: 40px;
+    text-align: center;
+}
+
+.title-wrapper{
+    display: none;
+}
+
+.title3{
+    color: #ECA83E;
+    border: 1px solid #ECA83E;
+    border-radius: 50px;
+    width: 460px;
+    height: 40px;
+    margin-bottom: 20px;
+    line-height: 40px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.schedule-table-event{
+    padding-left: 0px;
+}
+
+.schedule-table-stage{
+    padding-left: 0px;
+}
+
+
 h3 { 
     position: relative;
-    padding-left: 40px;
-    font-weight: 500;
-    font-size: 1.75rem;
+    padding-left: 50px;
+    font-weight: bold;
+    font-size: 24px;
+    margin-top: 40px;
+    color: #ECA83E;
 }
 h3::before{
     position: absolute;
@@ -40,18 +119,19 @@ h3::before{
 }
 h4{
     position: relative;
-    padding-left: 30px;
-    font-size: 1.5rem;
-    font-weight: 500;
+    /*padding-left: 30px;*/
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
 }
-h4::before{
+/*h4::before{
     position: absolute;
     content: url(../img/participants/triangle.svg);
     width: 30px;
     height: 30px;
     margin-left: -30px;
     top: calc(50% - 15px);
-}
+}*/
 
 .pdf{
     position: relative;
@@ -59,13 +139,19 @@ h4::before{
     width: max-content;
     margin-left: auto;
     margin-right: auto;
+    font-size: 14px;
 }
 .pdf::before{
     position: absolute;
-    content: url(../img/participants/pdf.svg);
-    width: 30px;
-    margin-left: -40px;
+    content: '';
+    display:inline-block;
+    width: 25px;
+    height:35px;
+    background-image: url(../img/participants/pdf.svg);
+    background-size: contain;
+    margin-left: -30px;
     top: calc(50% - 17px);
+    background-repeat: no-repeat;
 }
 
 .excel{
@@ -74,13 +160,19 @@ h4::before{
     width: max-content;
     margin-left: auto;
     margin-right: auto;
+    font-size: 14px;
 }
 .excel::before{
     position: absolute;
-    content: url(../img/participants/excel.svg);
-    width: 30px;
-    margin-left: -40px;
+    content: '';
+    display:inline-block;
+    width: 25px;
+    height:35px;
+    background-image: url(../img/participants/excel.svg);
+    background-size: contain;
+    margin-left: -30px;
     top: calc(50% - 17px);
+    background-repeat: no-repeat;
 }
 
 .word{
@@ -89,13 +181,20 @@ h4::before{
     width: max-content;
     margin-left: auto;
     margin-right: auto;
+    
+    font-size: 14px;
 }
 .word::before{
     position: absolute;
-    content: url(../img/participants/word.svg);
-    width: 30px;
-    margin-left: -40px;
+    content: '';
+    display:inline-block;
+    width: 25px;
+    height:35px;
+    background-image: url(../img/participants/word3.svg);
+    background-size: contain;
+    margin-left: -30px;
     top: calc(50% - 17px);
+    background-repeat: no-repeat;
 }
 .movie{
     position: relative;
@@ -103,12 +202,13 @@ h4::before{
     width: max-content;
     margin-left: auto;
     margin-right: auto;
+    font-size: 14px;
 }
 .movie::before{
     position: absolute;
     content: url(../img/participants/movie.svg);
     width: 30px;
-    margin-left: -40px;
+    margin-left: -20px;
     top: calc(50% - 15px);
 }
 
@@ -118,17 +218,224 @@ h4::before{
     width: max-content;
     margin-left: auto;
     margin-right: auto;
+    font-size: 14px;
 }
 .form::before{
     position: absolute;
-    content: url(../img/participants/form.svg);
-    width: 30px;
-    margin-left: -40px;
+    content: '';
+    display:inline-block;
+    width: 25px;
+    height:35px;
+    background-image: url(../img/participants/form2.svg);
+    background-size: contain;
+    margin-left: -30px;
     top: calc(50% - 17px);
+    background-repeat: no-repeat;
+}
+
+.img{
+    position: relative;
+    display: block;
+    width: max-content;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 14px;
 }
 
 
-p {
+main p {
     margin-top: 0px;
     text-align: justify;
+    font-size: 16px;
+    font-weight: normal;
+    word-break: break-all;
+}
+
+.documents > div > div{
+    background-color: #F3F3F3;
+    border-radius: 5px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-weight: normal;
+}
+
+.documents>div>div{
+    margin-top: 20px;
+    transition: .3s;
+}
+
+.documents > div > div a {
+    display: block;
+    padding: 0 20px 0 60px;
+    color: var(--color-font);
+}
+
+.documents > div > div:hover{
+    background-color: var(--color-font);
+}
+
+.documents > div > div:hover a {
+    color: #FFF;
+}
+
+.documents > div > div::before {
+    left: 20px;
+    margin-left: 0;
+    pointer-events: none;
+}
+
+.documents > div > div:hover::before {
+    filter: brightness(10);
+}
+
+@media screen and (min-width: 1000px) {
+    h4 {
+        margin-top: 0;
+    }
+
+    .documents > div > div{
+        background-color: #FFF;
+    }
+
+    .documents > div {
+        background-color: #F3F3F3;
+        border-radius: 10px;
+        margin-bottom: 30px;
+        padding: 20px 30px;
+    }
+}
+
+
+@media screen and (min-width: 576px) and (max-width: 1000px){
+    .table{
+        display:block;
+        margin: 0px auto;
+    }
+
+    .title{
+        margin: 0px auto 20px auto;
+    }
+
+
+    main ul{
+        width: 460px;
+        margin: 0 auto;
+    }
+
+    main p{
+        width: calc(100% - 30px);
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    main h4{
+        width: calc(100% - 30px);
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+}
+
+@media screen and (max-width: 576px){
+    .table{
+        display: block;
+    }
+
+    main li{
+        padding: 0;
+        width: 100%;
+    }
+
+    .table>ul>div.active{
+        display: block;
+    }
+
+    .table>ul>div{
+        display: none;
+    }
+
+    .title-wrapper .active{
+        color: white;
+        background-color: #ECA83E;
+        border-radius: 50px;
+        width: 45%;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .title-wrapper > div{
+        color: #ECA83E;
+        border: 1px solid #ECA83E;
+        border-radius: 50px;
+        width: 45%;
+        height: 35px;
+        margin-bottom: 20px;
+        line-height: 35px;
+        text-align: center;
+        font-size: 14px;
+    }
+    .title{
+        width: 45%;        
+    }
+
+    .title2{
+        display: block;
+        color: #ECA83E;
+        border: 1px solid #ECA83E;
+        border-radius: 50px;
+        width: 45%;
+        height: 40px;
+        margin-bottom: 20px;
+        line-height: 40px;
+        text-align: center;
+    }
+
+    .title3{
+        display: none;
+    }
+
+    .title-wrapper{
+        display: flex;
+        justify-content: space-around;
+        margin: 20px auto 0px auto;
+    }
+
+    /*.schedule-table-event{
+        width: 100%;
+    }*/
+
+    /*.schedule-table-stage>div.active{
+        display: none;
+        margin-bottom: 100px;
+    }*/
+    main p{
+        width: calc(100% - 30px);
+        margin: 20px auto 0px auto;
+        font-size: 14px;
+    }
+
+
+    main ul{
+        padding: 0px;
+        margin: 0px;
+        font-size: 14px;
+    }
+
+    main h4{
+        width: calc(100% - 30px);
+        margin: 40px auto 20px auto;
+    }
+
+    .documents > div > div:hover{
+        background-color: #F3F3F3;
+    }
+    
+    .documents > div > div:hover a {
+        color: var(--color-font);
+    }
+
+    .documents > div > div:hover::before {
+        filter: none;
+    }
 }

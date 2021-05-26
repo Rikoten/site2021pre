@@ -1,13 +1,13 @@
-body{
+/*body{
     background-color:#F3F9AF;
-}
+}*/
 
 .all{
-    color: #ECA83E;
+    color: black;
     font-family: "Yu Gothic", 游ゴシック, YuGothic, 游ゴシック体, "ヒラギノ角ゴ Pro W3", メイリオ, sans-serif;
     max-width: 1000px;
-    width: calc(100% - 30px);
-    margin: 0 auto;
+    width: calc(100% - 15px);
+    margin: 50px auto;
 }
 
 h1{
@@ -17,7 +17,7 @@ h1{
 }
 
 h1::before{
-    content: url(/img/notice/announce.svg);
+    content: url("../img/notice/announce.svg");
     position: absolute;
     left: -45px;
     height: 50px;
@@ -28,53 +28,91 @@ h1::before{
 
 .title{
     position: relative;
-    margin-left: 30px;
+    margin-top: 10px;
     font-size: 24px;
+    font-weight: bold;
 }
 
-.title::before{
+/*.title::before{
     content: url(/img/participants/hexagon.svg);
     position: absolute;
     height: 30px;
     width: 30px;
     left: -30px;
-}
+}*/
 
 h2{
     position: relative;
-    font-size: 22px;
-    margin: 20px 0px 20px 30px;
+    font-size: 18px;
+    margin: 0px;
 }
 
-h2::before{
+/*h2::before{
     content: url(/img/notice/triangle.svg);
     position: absolute;
     height:30px;
     width:30px;
     left: -30px;
     top: 2px;
-}
+}*/
 
-#date{
-    font-weight: bold;
+.date{
     text-align: right;
+    padding-top: 2px;
+    font-size: 15px;
 }
 
 .under{
     display: flex;
-    justify-content: space-between;
+    vertical-align: center;
+    /*justify-content: space-between;*/
 }
 
-.name{
-    background-color: red;
-    padding: 1px 5px 1px 5px;
-    color: white;
-    border-radius: 5px;
+.label{
+    --label-color: var(--color-font);
+    border: 1px solid var(--label-color);
+    margin-left: 30px;
+    text-align: center;
+    vertical-align: middle;
+    padding: 2px 10px;
+    color: var(--label-color);
+    border-radius: 20px;
     font-weight: bold;
+    font-size: 14px;
+    height: 20px;
+}
+
+.label.important {
+    --label-color: var(--color-red);
+}
+
+.label.participants {
+    --label-color: var(--color-purple);
+}
+
+.label.sponsor {
+    --label-color: var(--color-green);
 }
 
 p{
-    font-size: 18px;
-    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 50px;
+    margin-top: 30px;
 }
 
+ul{
+    padding:0px;
+}
+
+li{
+    list-style: none;
+    font-size: 16px;
+}
+
+a{
+    text-decoration: none;
+}
+
+#link_list a {
+    color: var(--color-blue);
+}
