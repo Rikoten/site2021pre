@@ -1,9 +1,6 @@
 const scheduleLi = document.querySelectorAll(".table>ul>div");
 const scheduleMenu = document.querySelectorAll(".table>.title-wrapper>div")
 
-console.log(scheduleLi);
-console.log(scheduleMenu);
-
 for(const div of scheduleMenu){
     div.addEventListener("click", () =>{
         const index = [].slice.call(scheduleMenu).indexOf(div);
