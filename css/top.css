@@ -496,3 +496,9 @@ section.latest-news a.backnumber::before{
     margin-bottom: 16rem;
   }
 }
+
+@media screen and (min-width: 1600px) {
+  section.link {
+    min-height: 300px;
+  }
+}
