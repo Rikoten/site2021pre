@@ -179,6 +179,7 @@ section.latest-news span.title {
 section.latest-news a:first-of-type {
   margin-right: auto;
   line-height: 4em;
+  flex-grow: 1;
 }
 
 
@@ -404,6 +405,10 @@ section.latest-news a.backnumber::before{
     padding: 5px 0;
     width: 100%;
   }
+
+  section.latest-news .date {
+    margin-right: 10px;
+}
 }
 
 @media screen and (max-width: 576px) {
