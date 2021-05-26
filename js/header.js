@@ -69,17 +69,21 @@ let retryCount = 0
         const imageElement = document.createElement('img')
         imageElement.src = imagePathBase + image.file
         imageWrapper.innerHTML = ''
+        if(image.position) imageElement.style.objectPosition = image.position;
         imageWrapper.appendChild(imageElement)
+        document.querySelector(".header .group-name").textContent = image.name;
     }
 
     setImage(imagesForCurrentPage[0])
 
-    let currentImage = 0
-    setInterval(() => {
-        currentImage += 1
-        if (currentImage >= imagesForCurrentPage.length) {
-            currentImage = 0
-        }
-        setImage(imagesForCurrentPage[currentImage])
-    }, 6000)
+    if(imagesForCurrentPage.length > 1) {
+        let currentImage = 0
+        setInterval(() => {
+            currentImage += 1
+            if (currentImage >= imagesForCurrentPage.length) {
+                currentImage = 0
+            }
+            setImage(imagesForCurrentPage[currentImage])
+        }, 6000)
+    }
 })()

@@ -134,6 +134,8 @@ nav .menu ul li a {
   padding: 20px 0 20px 60px;
   cursor: pointer;
   display: block;
+  font-weight: bold;
+  font-size: 20px;
 }
 
 nav .menu ul li.active {
