@@ -42,8 +42,8 @@
 }
 
 .header.top .image-wrap img {
-    width: calc(100% + 30px);
-    animation: 6s linear slide, .3s ease-in 6s fade-out;
+    width: calc(100% + 40px);
+    animation: 7s linear slide, 1s ease-in 6s fade-out;
     animation-fill-mode: forwards;
 }
 
@@ -53,6 +53,8 @@
     left: 0;
     animation: none;
     z-index: 10;
+    animation: 7s linear slide-next;
+    animation-fill-mode: forwards;
 }
 
 @keyframes fade-out {
@@ -67,11 +69,21 @@
 
 @keyframes slide {
     from {
-        transform: translateX(0);
+        transform: translateX(-5px);
     }
 
     to {
-        transform: translateX(-30px);
+        transform: translateX(-40px);
+    }
+}
+
+@keyframes slide-next {
+    87.5% {
+        transform: translateX(0px);
+    }
+
+    to {
+        transform: translateX(-5px);
     }
 }
 

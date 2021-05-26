@@ -2,7 +2,8 @@
     {
         "name": "下駄っぱーず",
         "file": "geta.jpg",
-        "place": "index"
+        "place": "index",
+        "position": "top"
     },
     {
         "name": "早稲田大学よさこいチーム東京花火",
@@ -13,17 +14,20 @@
     {
         "name": "早稲田大学ジャグリングサークル 〜infinity〜",
         "file": "infinity.jpg",
-        "place": "index"
+        "place": "index",
+        "position": "top"
     },
     {
         "name": "環境ロドリゲス Re-Cover",
         "file": "kankyo.jpg",
-        "place": "index"
+        "place": "index",
+        "position": "top"
     },
     {
         "name": "理工展連絡会（キッズラボ）",
         "file": "kidslab.jpg",
-        "place": "index"
+        "place": "index",
+        "position": "top"
     },
     {
         "name": "早稲田大学お笑い工房LUDO",
@@ -40,7 +44,8 @@
     {
         "name": "早稲田大学”踊り侍”",
         "file": "odori.jpg",
-        "place": "index"
+        "place": "index",
+        "position": "top"
     },
     {
         "name": "早大防災教育支援会WASEND",

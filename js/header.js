@@ -72,12 +72,15 @@ let retryCount = 0
         const imageElement = document.createElement('img')
         imageElement.classList.add('current')
         imageElement.src = imagePathBase + image.file
+        imageElement.style.objectPosition = image.position
         imageWrapper.appendChild(imageElement)
+        document.querySelector(".header .group-name").textContent = image.name
 
         if (nextImage) {
             const nextImageElement = document.createElement('img')
             nextImageElement.classList.add('next')
             nextImageElement.src = imagePathBase + nextImage.file
+            nextImageElement.style.objectPosition = nextImage.position
             imageWrapper.appendChild(nextImageElement)
         }
     }
@@ -94,5 +97,5 @@ let retryCount = 0
             imagesForCurrentPage[currentImage],
             imagesForCurrentPage[currentImage + 1] ?? imagesForCurrentPage[0]
         )
-    }, 6500)
+    }, 7000)
 })()
