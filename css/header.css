@@ -36,7 +36,6 @@
     object-fit: cover;
     animation: 6s linear slide, .3s ease-in 6s fade-out;
     animation-fill-mode: forwards;
-    object-position: top;
     z-index: 100;
 
     position: absolute;
