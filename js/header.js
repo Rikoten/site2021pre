@@ -31,15 +31,15 @@ let retryCount = 0
             retry()
         })
 
-    const headerTypeEl = Array
+    const selfScriptEl = Array
         .from(document.getElementsByTagName('script'))
         .filter(el => el.src?.includes('header.js'))[0]
-    if (!headerTypeEl) {
+    if (!selfScriptEl) {
         throw 'Self <script> tag not found.'
     }
 
-    const headerType = headerTypeEl.getAttribute('data-header-type')
-    if (!headerTypeEl) {
+    const headerType = selfScriptEl.getAttribute('data-header-type')
+    if (!selfScriptEl) {
         throw 'data-header-type attribute not specified in the script tag.'
     }
     if (!(['index', 'news', 'participants']).includes(headerType)) {
@@ -48,9 +48,9 @@ let retryCount = 0
 
     const imagesForCurrentPage = images.filter(it => it.place == headerType)
 
-    const imagePathBase = document.querySelector('meta[data-name=header-image-path]')?.getAttribute('data-content')
+    const imagePathBase = selfScriptEl.getAttribute('data-image-path')
     if (!imagePathBase) {
-        throw '<meta data-name=header-image-path> must be exist.'
+        throw 'Specify data-image-path for <script>.'
     }
 
     for (const image of imagesForCurrentPage) {
@@ -61,29 +61,38 @@ let retryCount = 0
         document.head.appendChild(link)
     }
 
-    const setImage = (image) => {
+    const setImage = (image, nextImage = null) => {
         if (!image) {
             console.error('image undefined')
             return
         }
-        const imageElement = document.createElement('img')
-        imageElement.src = imagePathBase + image.file
+
         imageWrapper.innerHTML = ''
-        if(image.position) imageElement.style.objectPosition = image.position;
+
+        const imageElement = document.createElement('img')
+        imageElement.classList.add('current')
+        imageElement.src = imagePathBase + image.file
         imageWrapper.appendChild(imageElement)
-        document.querySelector(".header .group-name").textContent = image.name;
+
+        if (nextImage) {
+            const nextImageElement = document.createElement('img')
+            nextImageElement.classList.add('next')
+            nextImageElement.src = imagePathBase + nextImage.file
+            imageWrapper.appendChild(nextImageElement)
+        }
     }
 
-    setImage(imagesForCurrentPage[0])
+    setImage(imagesForCurrentPage[0], imagesForCurrentPage[1])
 
-    if(imagesForCurrentPage.length > 1) {
-        let currentImage = 0
-        setInterval(() => {
-            currentImage += 1
-            if (currentImage >= imagesForCurrentPage.length) {
-                currentImage = 0
-            }
-            setImage(imagesForCurrentPage[currentImage])
-        }, 6000)
-    }
+    let currentImage = 0
+    setInterval(() => {
+        currentImage += 1
+        if (currentImage >= imagesForCurrentPage.length) {
+            currentImage = 0
+        }
+        setImage(
+            imagesForCurrentPage[currentImage],
+            imagesForCurrentPage[currentImage + 1] ?? imagesForCurrentPage[0]
+        )
+    }, 6500)
 })()

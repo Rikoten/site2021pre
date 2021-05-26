@@ -27,37 +27,51 @@
     width: inherit;
     height: inherit;
     background-color: rgba(0, 0, 0, .3);
-    z-index: 1;
+    z-index: 1000;
 }
 
 .header .image-wrap img {
-    width: calc(100% + 30px);
+    width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: top;
+    z-index: 100;
+
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .header.top .image-wrap img {
-    animation: 6s linear slide;
+    width: calc(100% + 30px);
+    animation: 6s linear slide, .3s ease-in 6s fade-out;
+    animation-fill-mode: forwards;
+}
+
+.header .image-wrap img.next {
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: none;
+    z-index: 10;
+}
+
+@keyframes fade-out {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
 }
 
 @keyframes slide {
     from {
         transform: translateX(0);
-        filter: brightness(1.2);
-    }
-
-    10% {
-        filter: brightness(1);
-    }
-
-    90% {
-        filter: brightness(1);
     }
 
     to {
         transform: translateX(-30px);
-        filter: brightness(1.2);
     }
 }
 
@@ -151,32 +165,32 @@
     .header .text p:nth-child(1) {
         font-size: calc(var(--base-font-size) * 9);
     }
-    
+
     .header .text p:nth-child(2) {
         font-size: calc(var(--base-font-size) * 15);
         margin-bottom: .1em;
     }
-    
+
     .header .text p:nth-child(3) span {
         margin-right: .5rem;
     }
-    
+
     .header .text p:nth-child(3) span:nth-child(1) {
         font-size: calc(var(--base-font-size) * 12);
     }
-    
+
     .header .text p:nth-child(3) span:nth-child(2) {
         font-size: calc(var(--base-font-size) * 4.5);
     }
-    
+
     .header .text p:nth-child(3) span:nth-child(3) {
         font-size: calc(var(--base-font-size) * 12);
     }
-    
+
     .header .text p:nth-child(3) span:nth-child(4) {
         font-size: calc(var(--base-font-size) * 12);
     }
-    
+
     .header .text p:nth-child(3) span:nth-child(5) {
         font-size: calc(var(--base-font-size) * 4.5);
     }
@@ -188,8 +202,8 @@
         line-height: 2;
         background: white;
         font-size: calc(var(--base-font-size) * 4);
-        
-    
+
+
         color: rgba(0, 0, 0, .7);
     }
 }
