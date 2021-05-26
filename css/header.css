@@ -34,40 +34,41 @@
     width: calc(100% + 30px);
     height: 100%;
     object-fit: cover;
-    animation: .3s ease-in fade-in, 6s linear .3s slide, .3s ease-in 6.3s fade-out;
+    animation: 6s linear slide, .3s ease-in 6s fade-out;
     animation-fill-mode: forwards;
     object-position: top;
+    z-index: 100;
+
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
-@keyframes fade-in {
-    from {
-        filter: brightness(0);
-    }
-
-    to {
-        filter: brightness(1);
-    }
+.header .image-wrap img.next {
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: none;
+    z-index: 10;
 }
 
 @keyframes fade-out {
     from {
-        filter: brightness(1);
+        opacity: 1;
     }
 
     to {
-        filter: brightness(0);
+        opacity: 0;
     }
 }
 
 @keyframes slide {
     from {
         transform: translateX(0);
-        filter: brightness(1);
     }
 
     to {
         transform: translateX(-30px);
-        filter: brightness(1);
     }
 }
 
