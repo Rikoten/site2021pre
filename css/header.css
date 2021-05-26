@@ -144,9 +144,10 @@
     width: max-content;
     height: 1.5rem;
     line-height: 1.5;
+    font-size: 1rem;
     background: white;
 
-    color: rgba(0, 0, 0, .7);
+    color: #222;
 }
 
 .header .text .page-title.hidden {
@@ -208,15 +209,14 @@
     }
 
     .header .text .page-title {
-        padding: .5rem 7rem .5rem 2rem;
+        padding: .5rem 10rem .5rem 2rem;
         width: max-content;
-        height: 2rem;
-        line-height: 2;
+        height: 2.5rem;
+        line-height: 2.5rem;
         background: white;
-        font-size: calc(var(--base-font-size) * 4);
+        font-size: 1.5rem;
 
-
-        color: rgba(0, 0, 0, .7);
+        color: #222;
     }
 }
 
