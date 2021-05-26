@@ -8,6 +8,7 @@
 }
 
 body {
+  font-family: "Yu Gothic", 游ゴシック, YuGothic, 游ゴシック体, "ヒラギノ角ゴ Pro W3", メイリオ, sans-serif;
   margin: 0;
 }
 
@@ -193,11 +194,11 @@ nav .menu a.inactive {
 nav .menu .copyright {
   position: absolute;
   bottom: 10px;
-  left: 20px;
+  left: 40px;
 }
 
 nav .menu .copyright p {
-  margin: 2px 20px 2px 0;
+  margin: 2px 40px 2px 0;
   color: rgba(255, 255, 255, .5);
   font-size: 13px;
 }
@@ -496,6 +497,14 @@ section.latest-news a.backnumber {
 @media screen and (max-width: 576px) {
   nav .menu {
     max-width: 576px;
+  }
+
+  nav .menu .copyright {
+    left: 20px;
+  }
+  
+  nav .menu .copyright p {
+    margin: 2px 20px 2px 0;
   }
 
   .news ul li {
