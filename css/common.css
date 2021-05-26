@@ -8,6 +8,7 @@
 }
 
 body {
+  font-family: "Yu Gothic", 游ゴシック, YuGothic, 游ゴシック体, "ヒラギノ角ゴ Pro W3", メイリオ, sans-serif;
   margin: 0;
 }
 
@@ -52,7 +53,8 @@ nav .menu-opener {
   padding-right: 15px;
 }
 
-nav .menu-opener:hover .menu-opener-icon span {
+nav .menu-opener:hover .menu-opener-icon span,
+nav .menu-opener.black:hover .menu-opener-icon span {
   background-color: var(--color-orange);
 }
 
@@ -74,7 +76,7 @@ nav .menu-close .menu-close-text {
   transition: .3s;
 }
 
-nav .menu-opener:hover .menu-opener-text,
+nav .menu-opener:hover span.menu-opener-text,
 nav .menu-close:hover .menu-close-text {
   transform: translateX(-5px);
   color: var(--color-orange);
@@ -86,23 +88,19 @@ nav .menu-opener-icon span {
   height: 5px;
   background-color: #FFF;
   border-radius: 50%;
-  transition: transform .3s;
-}
-
-nav .menu-opener-icon span:nth-child(1) {
-  transition: background-color .1s;
-}
-
-nav .menu-opener-icon span:nth-child(2) {
-  transition: background-color .2s;
-}
-
-nav .menu-opener-icon span:nth-child(3) {
-  transition: background-color .3s;
+  transition: .3s;
 }
 
 nav .menu-opener-icon span:not(:last-of-type) {
   margin-bottom: 5px;
+}
+
+nav .menu-opener.black .menu-opener-text {
+  color: #222;
+}
+
+nav .menu-opener.black .menu-opener-icon span {
+  background-color: #222;
 }
 
 nav .menu {
@@ -121,7 +119,7 @@ nav .menu {
 }
 
 nav .menu ul {
-  margin-top: 100px;
+  margin-top: 80px;
 }
 
 nav .menu ul li {
@@ -134,6 +132,8 @@ nav .menu ul li a {
   padding: 20px 0 20px 60px;
   cursor: pointer;
   display: block;
+  font-weight: bold;
+  font-size: 20px;
 }
 
 nav .menu ul li.active {
@@ -149,7 +149,7 @@ nav .menu-close {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  margin: 20px 40px 0 0;
+  margin: 15px 30px 0 0;
   cursor: pointer;
 }
 
@@ -189,6 +189,18 @@ nav .menu-close:hover .menu-close-icon::after {
 nav .menu a.inactive {
   color: #777;
   cursor: auto;
+}
+
+nav .menu .copyright {
+  position: absolute;
+  bottom: 10px;
+  left: 40px;
+}
+
+nav .menu .copyright p {
+  margin: 2px 40px 2px 0;
+  color: rgba(255, 255, 255, .5);
+  font-size: 13px;
 }
 
 .topic-path {
@@ -483,6 +495,18 @@ section.latest-news a.backnumber {
 
 
 @media screen and (max-width: 576px) {
+  nav .menu {
+    max-width: 576px;
+  }
+
+  nav .menu .copyright {
+    left: 20px;
+  }
+  
+  nav .menu .copyright p {
+    margin: 2px 20px 2px 0;
+  }
+
   .news ul li {
     line-height: 1.7em;
     margin-right: -15px;

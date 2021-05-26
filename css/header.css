@@ -36,6 +36,7 @@
     object-fit: cover;
     animation: .3s ease-in fade-in, 6s linear .3s slide, .3s ease-in 6.3s fade-out;
     animation-fill-mode: forwards;
+    object-position: top;
 }
 
 @keyframes fade-in {
@@ -71,7 +72,7 @@
 }
 
 .header .text {
-    padding-top: 5%;
+    padding-top: 15%;
     padding-left: 10%;
 
     font-weight: bold;
@@ -136,7 +137,27 @@
     background: transparent;
 }
 
+.header p.group-name {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    color: rgba(255,255,255,.5);
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0;
+}
+
+@media screen and (min-width: 567px) {
+    .header .text {
+        padding-top: 10%;
+    }
+}
+
 @media screen and (min-width: 1000px) {
+    .header .text {
+        padding-top: 5%;
+    }
+
     .header .text p:nth-child(1) {
         font-size: calc(var(--base-font-size) * 9);
     }
@@ -147,7 +168,7 @@
     }
 
     .header .text p:nth-child(3) span {
-        margin-right: 1rem;
+        margin-right: .5rem;
     }
 
     .header .text p:nth-child(3) span:nth-child(1) {
@@ -180,5 +201,44 @@
 
 
         color: rgba(0, 0, 0, .7);
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    .header {
+        min-height: 600px;
+    }
+
+    .header .text p:nth-child(1) {
+        font-size: calc(var(--base-font-size) * 12);
+    }
+    
+    .header .text p:nth-child(2) {
+        font-size: calc(var(--base-font-size) * 20);
+        margin-bottom: .1em;
+    }
+    
+    .header .text p:nth-child(3) span {
+        margin-right: .5rem;
+    }
+    
+    .header .text p:nth-child(3) span:nth-child(1) {
+        font-size: calc(var(--base-font-size) * 16);
+    }
+    
+    .header .text p:nth-child(3) span:nth-child(2) {
+        font-size: calc(var(--base-font-size) * 6);
+    }
+    
+    .header .text p:nth-child(3) span:nth-child(3) {
+        font-size: calc(var(--base-font-size) * 16);
+    }
+    
+    .header .text p:nth-child(3) span:nth-child(4) {
+        font-size: calc(var(--base-font-size) * 16);
+    }
+    
+    .header .text p:nth-child(3) span:nth-child(5) {
+        font-size: calc(var(--base-font-size) * 6);
     }
 }
