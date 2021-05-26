@@ -81,5 +81,5 @@ let retryCount = 0
             currentImage = 0
         }
         setImage(imagesForCurrentPage[currentImage])
-    }, 6000)
+    }, 6500)
 })()
