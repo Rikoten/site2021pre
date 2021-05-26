@@ -52,7 +52,8 @@ nav .menu-opener {
   padding-right: 15px;
 }
 
-nav .menu-opener:hover .menu-opener-icon span {
+nav .menu-opener:hover .menu-opener-icon span,
+nav .menu-opener.black:hover .menu-opener-icon span {
   background-color: var(--color-orange);
 }
 
@@ -74,7 +75,7 @@ nav .menu-close .menu-close-text {
   transition: .3s;
 }
 
-nav .menu-opener:hover .menu-opener-text,
+nav .menu-opener:hover span.menu-opener-text,
 nav .menu-close:hover .menu-close-text {
   transform: translateX(-5px);
   color: var(--color-orange);
@@ -86,23 +87,19 @@ nav .menu-opener-icon span {
   height: 5px;
   background-color: #FFF;
   border-radius: 50%;
-  transition: transform .3s;
-}
-
-nav .menu-opener-icon span:nth-child(1) {
-  transition: background-color .1s;
-}
-
-nav .menu-opener-icon span:nth-child(2) {
-  transition: background-color .2s;
-}
-
-nav .menu-opener-icon span:nth-child(3) {
-  transition: background-color .3s;
+  transition: .3s;
 }
 
 nav .menu-opener-icon span:not(:last-of-type) {
   margin-bottom: 5px;
+}
+
+nav .menu-opener.black .menu-opener-text {
+  color: #222;
+}
+
+nav .menu-opener.black .menu-opener-icon span {
+  background-color: #222;
 }
 
 nav .menu {
@@ -121,7 +118,7 @@ nav .menu {
 }
 
 nav .menu ul {
-  margin-top: 100px;
+  margin-top: 80px;
 }
 
 nav .menu ul li {
@@ -485,6 +482,10 @@ section.latest-news a.backnumber {
 
 
 @media screen and (max-width: 576px) {
+  nav .menu {
+    max-width: 576px;
+  }
+
   .news ul li {
     line-height: 1.7em;
     margin-right: -15px;

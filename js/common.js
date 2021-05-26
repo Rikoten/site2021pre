@@ -2,6 +2,7 @@ const menuOpener = document.querySelector("nav .menu-opener");
 const menuClose = document.querySelector("nav .menu-close");
 const menu = document.querySelector("nav .menu");
 const menuCloseTarget = document.querySelector("nav .menu-close-target");
+const header = document.querySelector(".header");
 
 menuOpener.addEventListener("click", () => {
   menu.style.transform = "none";
@@ -24,4 +25,21 @@ const closeMenu = () => {
 
 const noScroll = (event) => {
   event.preventDefault();
+}
+
+window.addEventListener("scroll", () => changeMenuOpenerColor());
+
+if(!navigator.userAgent.match(/iPhone|Android.+Mobile/)) {
+  window.addEventListener("resize", () => changeMenuOpenerColor());
+}
+
+const changeMenuOpenerColor = () => {
+  const headerHeight = header.getBoundingClientRect().height;
+  const scrollHeight = window.pageYOffset;
+
+  if(headerHeight - 25 < scrollHeight) {
+    if(!menuOpener.classList.contains("black")) menuOpener.classList.add("black");
+  } else {
+    if(menuOpener.classList.contains("black")) menuOpener.classList.remove("black");
+  }
 }
