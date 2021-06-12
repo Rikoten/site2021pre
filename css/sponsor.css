@@ -1,9 +1,10 @@
 body{
-    background-color: #F9F3AF;
-    max-width: 900px;
+    color:black;
+    background-color: white;
     font-family: "Yu Gothic", 游ゴシック, YuGothic, 游ゴシック体, "ヒラギノ角ゴ Pro W3", メイリオ, sans-serif;
     font-weight: bold;
-    margin :auto;
+    font-size: 16px;
+    margin: 0;
 }
 body h2{
     color: #ECA83E;
@@ -18,23 +19,32 @@ body h3{
     margin-left: 50px;
 }
 body p{
-    font-size: 18px;
-    color: #ECA83E;
+    font-size: 16px;
+    font-weight: lighter;
 }
 body div{
     position:relative;
-    text-align: center;
     font-size: 18px;
     font-weight: bold;
-    color: #ECA83E;
+}
+body div div div{
+    text-align: center;
+    position:relative;
+    font-size: 18px;
+    font-weight: bold;
 }
 body div::before{
-    content: url("../img/sponsor/pdf.svg");
-    position: absolute;
-    width: 35px;
-    height: 35px;
-    top: 0px;
-    left:400px;
+        position: absolute;
+        content: '';
+        display:inline-block;
+        width: 35px;
+        height:35px;
+        background-image: url(../img/sponsor/pdf.svg);
+        background-size: contain;
+        margin-left: -30px;
+        top: calc(50% - 17px);
+        background-repeat: no-repeat;
+        left:400px;
 }
 .shakehands{
     position: relative;
