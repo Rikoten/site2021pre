@@ -91,9 +91,6 @@ main {
     pointer-events: none;
 }
 
-.docu div div:hover::before {
-    filter: brightness(10);
-}
 .movie ::before{
     position: absolute;
     content: '';
@@ -106,18 +103,105 @@ main {
     top: 12px;
     background-repeat: no-repeat;
 }
-.pdf ::before{
-position: absolute;
-content: '';
-display:inline-block;
-width: 25px;
-height:35px;
-background-image: url(../img/sponsor/pdf.svg);
-background-size: contain;
-margin-left: -30px;
-top: calc(50% - 17px);
-background-repeat: no-repeat;
+.movie ::after{
+    position: absolute;
+    content: '';
+    display:inline-block;
+    width: 25px;
+    height:35px;
+    background-image: url(../img/sponsor/video2.svg);
+    background-size: contain;
+    opacity:0;
+    margin: left -30px;
+    left: 20%;
+    top: 12px;
+    background-repeat: no-repeat;
 }
+.pdf ::before{
+    position: absolute;
+    content: '';
+    display:inline-block;
+    width: 25px;
+    height:35px;
+    background-image: url(../img/sponsor/pdf.svg);
+    background-size: contain;
+    margin-left: -30px;
+    top: calc(50% - 17px);
+    background-repeat: no-repeat;
+}
+.pdf ::after{
+    position: absolute;
+    content: '';
+    display:inline-block;
+    width: 25px;
+    height:35px;
+    background-image: url(../img/sponsor/pdf2.svg);
+    background-size: contain;
+    margin-left: -30px;
+    top: calc(50% - 17px);
+    left: 60px;
+    opacity:0;
+    background-repeat: no-repeat;
+}
+
+
+.movie:hover ::before{
+    position: absolute;
+    content: '';
+    display:inline-block;
+    width: 25px;
+    height:35px;
+    background-image: url(../img/sponsor/video.svg);
+    background-size: contain;
+    margin-left: -30px;
+    top: 12px;
+    opacity:0;
+    background-repeat: no-repeat;
+}
+.movie:hover ::after{
+    position: absolute;
+    content: '';
+    display:inline-block;
+    width: 25px;
+    height:35px;
+    background-image: url(../img/sponsor/video2.svg);
+    background-size: contain;
+    opacity:0;
+    margin: left -30px;
+    left: 20%;
+    top: 12px;
+    opacity:1;
+    background-repeat: no-repeat;
+}
+.pdf:hover ::before{
+    position: absolute;
+    content: '';
+    display:inline-block;
+    width: 25px;
+    height:35px;
+    background-image: url(../img/sponsor/pdf.svg);
+    background-size: contain;
+    margin-left: -30px;
+    top: calc(50% - 17px);
+    background-repeat: no-repeat;
+    opacity: 0;
+}
+.pdf:hover ::after{
+    position: absolute;
+    content: '';
+    display:inline-block;
+    width: 25px;
+    height:35px;
+    background-image: url(../img/sponsor/pdf2.svg);
+    background-size: contain;
+    margin-left: -30px;
+    top: calc(50% - 17px);
+    left: 60px;
+    opacity:1;
+    background-repeat: no-repeat;
+}
+
+
 @media screen and (min-width: 1000px) {
     h4 {
         margin-top: 0;
