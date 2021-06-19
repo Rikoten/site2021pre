@@ -21,6 +21,7 @@ body h3{
 body p{
     font-size: 16px;
     font-weight: lighter;
+    margin:0;
 }
 body div{
     position:relative;
@@ -30,22 +31,17 @@ body div{
 body div div div{
     text-align: center;
     position:relative;
-    font-size: 18px;
-    font-weight: bold;
+    font-size: 15px;
+    font-weight: lighter;
+    margin-top: 10px;
+    transition: .3s;
 }
-body div::before{
-        position: absolute;
-        content: '';
-        display:inline-block;
-        width: 35px;
-        height:35px;
-        background-image: url(../img/sponsor/pdf.svg);
-        background-size: contain;
-        margin-left: -30px;
-        top: calc(50% - 17px);
-        background-repeat: no-repeat;
-        left:400px;
+
+main {
+    max-width: 1000px;
+    margin: 0 auto 100px;
 }
+
 .shakehands{
     position: relative;
 }
@@ -55,7 +51,7 @@ body div::before{
     height: 35px;
     position: absolute;
     top: 0px;
-    left: -60px;
+    left: -50px;
 }
 
 .Hexagon{
@@ -69,14 +65,112 @@ body div::before{
     top: 0px;
     left:-40px;
 }
-
-.Triangle{
-    position: relative;
+.docu div div{
+    background-color: #F3F3F3;
+    border-radius: 5px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-weight: normal;
+    width:max-content;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 30px 0 60px ;
 }
-.Triangle::before{
-    content: url("../img/notice/triangle.svg");
+.docu div  div:hover{
+    background-color: var(--color-font);
+}
+
+.docu div div:hover a {
+    color: #FFF;
+}
+
+.docu div div::before {
+    left: 20px;
+    margin-left: 0;
+    pointer-events: none;
+}
+
+.docu div div:hover::before {
+    filter: brightness(10);
+}
+.movie ::before{
     position: absolute;
-    top: 0px;
-    left:-30px;
+    content: '';
+    display:inline-block;
+    width: 25px;
+    height:35px;
+    background-image: url(../img/sponsor/video.svg);
+    background-size: contain;
+    margin-left: -30px;
+    top: 12px;
+    background-repeat: no-repeat;
+}
+.pdf ::before{
+position: absolute;
+content: '';
+display:inline-block;
+width: 25px;
+height:35px;
+background-image: url(../img/sponsor/pdf.svg);
+background-size: contain;
+margin-left: -30px;
+top: calc(50% - 17px);
+background-repeat: no-repeat;
+}
+@media screen and (min-width: 1000px) {
+    h4 {
+        margin-top: 0;
+    }
+
+    .docu div div{
+        background-color: #FFF;
+    }
+
+    .docu div {
+        background-color: #F3F3F3;
+        border-radius: 10px;
+        margin-bottom: 30px;
+        padding: 20px 30px;
+    }
 }
 
+
+@media screen and (min-width: 576px) and (max-width: 1000px){
+    main p{
+        width: calc(100% - 30px);
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    main h4{
+        width: calc(100% - 30px);
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media screen and (max-width: 576px){
+    main p{
+        width: calc(100% - 30px);
+        margin: 0px auto 0px auto;
+        font-size: 14px;
+    }
+
+    main h4{
+        width: calc(100% - 30px);
+        margin: 40px auto 20px auto;
+    }
+
+    .docu div div:hover{
+        background-color: #F3F3F3;
+    }
+    
+    .docu div div:hover a {
+        color: var(--color-font);
+    }
+
+    .docu div div:hover::before {
+        filter: none;
+    }
+}
