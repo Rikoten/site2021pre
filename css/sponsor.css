@@ -1,3 +1,8 @@
+:root {
+    --color-font: #404040;
+    --color-blue: #67B6FF;
+}
+
 body{
     color:black;
     background-color: white;
@@ -6,29 +11,36 @@ body{
     font-size: 16px;
     margin: 0;
 }
-body h2{
+main h2{
     color: #ECA83E;
     font-size: 1.5rem;
     font-weight: 500;
     margin-left: 30px;
 }
-body h3{
+main h3{
     color: #ECA83E;
     font-size: 1.5rem;
     font-weight: 500;
     margin-left: 50px;
 }
-body p{
+
+main > h3 {
+    margin-top: 60px;
+}
+
+main p{
     font-size: 16px;
     font-weight: lighter;
     margin:0;
 }
-body div{
+
+main div{
     position:relative;
     font-size: 18px;
     font-weight: bold;
 }
-body div div div{
+
+main div div div{
     text-align: center;
     position:relative;
     font-size: 15px;
@@ -40,6 +52,19 @@ body div div div{
 main {
     max-width: 1000px;
     margin: 0 auto 100px;
+}
+
+main a {
+    text-decoration: none;
+    color: var(--color-font);
+    display: block;
+    padding: 0 30px 0 60px;
+}
+
+main a.banner {
+    color: var(--color-blue);
+    display: inline;
+    padding: 0;
 }
 
 .shakehands{
@@ -65,6 +90,11 @@ main {
     top: 0px;
     left:-40px;
 }
+
+.docu > div:first-of-type {
+    margin-top: 30px;
+}
+
 .docu div div{
     background-color: #F3F3F3;
     border-radius: 5px;
@@ -75,7 +105,8 @@ main {
     width:max-content;
     margin-left: auto;
     margin-right: auto;
-    padding: 0 30px 0 60px ;
+    margin-bottom: 0;
+    padding: 0;
 }
 .docu div  div:hover{
     background-color: var(--color-font);
@@ -200,6 +231,7 @@ main {
     opacity:1;
     background-repeat: no-repeat;
 }
+
 
 
 @media screen and (min-width: 1000px) {
