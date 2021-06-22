@@ -42,8 +42,8 @@ let retryCount = 0
     if (!selfScriptEl) {
         throw 'data-header-type attribute not specified in the script tag.'
     }
-    if (!(['index', 'news', 'participants']).includes(headerType)) {
-        throw 'Invalid value for data-header-type attribute. Value must be within `index`, `news` or `participants`.'
+    if (!(['index', 'news', 'participants', 'sponsor']).includes(headerType)) {
+        throw 'Invalid value for data-header-type attribute. Value must be within `index`, `news`, `participants` or `sponsor`.'
     }
 
     const imagesForCurrentPage = images.filter(it => it.place == headerType)

@@ -101,7 +101,6 @@ section.link .participants {
 section.link .sponsor {
   background-color: #FFF;
   color: var(--color-orange);
-  cursor: auto;
 }
 
 section.link a.participants {
@@ -128,8 +127,8 @@ section.link a.sponsor::before {
   background: no-repeat center/12.5% url("/img/top/icon/sponsor.svg");
 }
 
-section.link a.participants:hover::before
-/*section.link a.sponsor:hover::before*/ {
+section.link a.participants:hover::before,
+section.link a.sponsor:hover::before {
   transform: scale(1.05);
 }
 

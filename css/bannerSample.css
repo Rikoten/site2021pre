@@ -1,0 +1,33 @@
+body {
+  margin: 0;
+}
+
+main {
+  width: calc(100% - 30px);
+  max-width: 1000px;
+  margin: 60px auto;
+}
+
+main > div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+main img {
+  margin-bottom: 15px;
+  border: 2px solid #777;
+}
+
+div.gold img {
+  width: calc((100% - 15px)/2);
+  max-width: 420px;
+  max-height: 140px;
+}
+
+div.silver img {
+  width: calc((100% - 30px)/3);
+  max-width: 270px;
+  max-height: 135px;
+}
