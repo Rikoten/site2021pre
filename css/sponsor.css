@@ -61,7 +61,8 @@ main a {
     padding: 0 30px 0 60px;
 }
 
-main a.banner {
+a.banner,
+a.mail {
     color: var(--color-blue);
     display: inline;
     padding: 0;
@@ -77,6 +78,8 @@ main a.banner {
     position: absolute;
     top: 0px;
     left: -50px;
+    transform: scale(.8);
+    margin-left: 5px;
 }
 
 .Hexagon{
@@ -159,6 +162,7 @@ main a.banner {
     margin-left: -30px;
     top: calc(50% - 17px);
     background-repeat: no-repeat;
+    transform: translateX(-10px);
 }
 .pdf ::after{
     position: absolute;
@@ -173,6 +177,7 @@ main a.banner {
     left: 60px;
     opacity:0;
     background-repeat: no-repeat;
+    transform: translateX(-10px);
 }
 
 
