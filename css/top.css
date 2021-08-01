@@ -133,7 +133,7 @@ section.link a.sponsor:hover::before {
 }
 
 section.link .inactive::after {
-  content: "近日公開予定です";
+  content: "しばらく\Aお待ちください";
   width: inherit;
   height: inherit;
   position: absolute;
@@ -146,6 +146,7 @@ section.link .inactive::after {
   display: flex;
   justify-content: center;
   align-items: center;
+  white-space: pre;
 }
 
 section.latest-news {
