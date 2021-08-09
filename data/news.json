@@ -51,5 +51,28 @@
         "contents":[
             "現在一時的にご案内を中断しております。恐れ入りますが少々お待ちいただけますようお願いいたします。" 
         ]
+    },
+    {
+        "head":"協賛資料の一部変更",
+        "date":"2021.08.09",
+        "label":"協賛",
+        "contents":[
+            "8月8日(日)に資料の一部変更を行いました。変更点は、開催形態の最終確定日時が8月中から10月中旬へ変更となった点です。恐れ入りますが、変更前の資料をご覧になっていた企業様はご確認をお願いいたします。" 
+        ],
+        "link_t":"関連リンク",
+        "link":[
+            {
+                "name":"ご協賛ページ",
+                "url":"/sponsor/"
+            },
+            {
+                "name":"協賛資料(pdf)",
+                "url":"https://drive.google.com/file/d/15uReWqUpkl9qX7jMk4Kp0D3ZmZOE6nVp/view?usp=sharing"
+            },
+            {
+                "name":"理工展開催中止または開催形態変更時の対応(pdf)",
+                "url":"https://drive.google.com/file/d/1Z-PwHGXG-xx37BKKy3BzfYrmuHbC35Qz/view?usp=sharing"
+            }
+        ]
     }
 ]
