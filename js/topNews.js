@@ -23,7 +23,10 @@ const latestNews = {
 
   const ul = document.querySelector(".news ul");
   const html = [];
-  for(const data of json) {
+  for(let i = 0; i < 3; i++) {
+    if(id < 0) break;
+    const data = json[i];
+
     html.push(`
       <li>
         <a href = "/news/news/?id=${id--}">
