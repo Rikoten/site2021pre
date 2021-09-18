@@ -17,7 +17,7 @@ body {
   color: var(--color-font);
 }
 
-p, span {
+section:not(section.mutual-link) p, span {
   font-size: .5rem;
 }
 
@@ -373,6 +373,81 @@ section.latest-news a.backnumber::before{
   margin-right: 10px;
 }
 
+section.mutual-link h1 {
+  font-size: 24px;
+  text-align: center;
+  position: relative;
+  color: var(--color-font);
+  margin: 20px 0;
+}
+
+section.mutual-link ul {
+  max-width: 1000px;
+  width: calc(100% - 30px);
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+section.mutual-link ul li {
+  max-width: 340px;
+  width: 100%;
+  border-radius: 10px;
+  font-size: 16px;
+  position: relative;
+  background: #FFF;
+  border: 2px solid var(--color-orange);
+  border-radius: 10px;
+  margin: 10px 0;
+}
+
+section.mutual-link a {
+  display: block;
+  padding: 10px 20px;
+}
+
+section.mutual-link ul li::before {
+  content: "";
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  top: 1px;
+  left: 1px;
+  position: absolute;
+  background: var(--color-orange);
+  z-index: -1;
+  border-radius: 10px;
+  transition: .2s;
+}
+
+section.mutual-link ul li:hover::before {
+  top: -2px;
+  left: -2px;
+}
+
+
+section.mutual-link a p {
+  margin: 0;
+}
+
+section.mutual-link a p:first-of-type {
+  display: inline;
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--color-orange);
+  margin-right: 10px;
+}
+
+section.mutual-link a span {
+  color: var(--color-orange);
+  font-weight: bold;
+  font-size: 16px;
+}
+
+section.mutual-link a .url {
+  font-size: 12px;
+}
+
 @media screen and (max-width: 1200px) {
   section.link a.participants::before {
     background: no-repeat center/30% url("/img/top/icon/participants.svg");
@@ -487,6 +562,10 @@ section.latest-news a.backnumber::before{
 
   section.about ul li img {
     height: 7rem;
+  }
+
+  section.mutual-link h1 {
+    font-size: 20px;
   }
 }
 
