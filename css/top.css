@@ -577,6 +577,17 @@ section.mutual-link a .url {
   }
 }
 
+@media screen and (max-width: 760px) {
+  section.mutual-link ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  section.mutual-link ul li:last-of-type:not(:nth-of-type(even)) {
+    margin-right: 0;
+  }
+}
+
 @media screen and (max-width: 430px) {
   section.about > div {
     margin-bottom: 14rem;
