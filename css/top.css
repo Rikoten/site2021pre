@@ -399,7 +399,11 @@ section.mutual-link ul li {
   background: #FFF;
   border: 2px solid var(--color-orange);
   border-radius: 10px;
-  margin: 10px 0;
+  margin: 20px 0;
+}
+
+section.mutual-link ul li:last-of-type:not(:nth-of-type(even)) {
+  margin-right: calc((100% - 340px * 2) / 2 + 340px);
 }
 
 section.mutual-link a {
